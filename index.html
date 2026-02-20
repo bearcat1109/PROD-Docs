@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Banner PROD Table Documentation</title>
+</head>
+<body class="landing-page">
+
+    <header class="hero">
+        <h1>Banner PROD Documentation</h1>
+        <p>Select a table to view column definitions and metadata.</p>
+        
+        <div class="search-container">
+            <input type="text" id="tableSearch" placeholder="Search tables (e.g. SPRIDEN)..." onkeyup="filterTables()">
+        </div>
+    </header>
+
+    <main class="catalog">
+        <div class="table-grid" id="tableGrid">
+            <a href="SPRIDEN_target.html" class="table-card" data-name="SPRIDEN Identification">
+                <h3>SPRIDEN</h3>
+                <p>Person Identification Table</p>
+                <span class="tag">General</span>
+            </a>
+
+            <a href="SPBPERS_target.html" class="table-card" data-name="SPBPERS Bio Demo">
+                <h3>SPBPERS</h3>
+                <p>Biographical/Demographic Information</p>
+                <span class="tag">General</span>
+            </a>
+
+            <a href="SARADAP_target.html" class="table-card" data-name="SARADAP Admissions">
+                <h3>SARADAP</h3>
+                <p>Admissions Application Table</p>
+                <span class="tag">Student</span>
+            </a>
+
+            <a href="TBRACCD_target.html" class="table-card" data-name="TBRACCD Accounts">
+                <h3>TBRACCD</h3>
+                <p>Student Account Detail Table</p>
+                <span class="tag">A/R</span>
+            </a>
+        </div>
+    </main>
+
+    <script>
+        function filterTables() {
+            const input = document.getElementById('tableSearch').value.toUpperCase();
+            const grid = document.getElementById('tableGrid');
+            const cards = grid.getElementsByClassName('table-card');
+
+            for (let i = 0; i < cards.length; i++) {
+                const name = cards[i].getAttribute('data-name');
+                if (name.toUpperCase().indexOf(input) > -1) {
+                    cards[i].style.display = "";
+                } else {
+                    cards[i].style.display = "none";
+                }
+            }
+        }
+    </script>
+</body>
+</html>

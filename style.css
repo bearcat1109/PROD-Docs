@@ -1,0 +1,159 @@
+
+
+/* Main Content Area */
+.content {
+    padding: 40px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #333;
+}
+
+h1 { color: #000000; margin-bottom: 5px; }
+.table-description { color: #666; margin-bottom: 30px; }
+
+/* Data Table Styling */
+.data-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.data-table th {
+    background-color: #004d25;
+    color: white;
+    text-align: left;
+    padding: 12px;
+}
+
+.data-table td {
+    padding: 10px 12px;
+    border-bottom: 1px solid #eee;
+    font-size: 0.95rem;
+}
+
+/* Zebra Striping */
+.data-table tr:nth-child(even) {
+    background-color: #fcfcfc;
+}
+
+.data-table tr:hover {
+    background-color: #f1f7ff;
+}
+
+
+
+/* Landing Page Styles */
+.landing-page {
+    background-color: #f4f7f9;
+    margin: 0;
+    font-family: 'Segoe UI', system-ui, sans-serif;
+}
+
+.hero {
+    background: linear-gradient(135deg, #004d25 0%, #036331 100%);
+    color: white;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.search-container {
+    margin-top: 25px;
+}
+
+#tableSearch {
+    width: 100%;
+    max-width: 500px;
+    padding: 12px 20px;
+    border-radius: 25px;
+    border: none;
+    font-size: 1rem;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+/* The Grid */
+.catalog {
+    max-width: 1000px;
+    margin: -30px auto 50px auto;
+    padding: 0 20px;
+}
+
+.table-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 20px;
+}
+
+/* The Cards */
+.table-card {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    text-decoration: none;
+    color: #333;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    transition: transform 0.2s, box-shadow 0.2s;
+    border-left: 4px solid #004a99;
+}
+
+.table-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0,0,0,0.1);
+}
+
+.table-card h3 {
+    margin: 0 0 10px 0;
+    color: #004a99;
+}
+
+.table-card p {
+    font-size: 0.85rem;
+    color: #666;
+    margin-bottom: 15px;
+}
+
+.tag {
+    font-size: 0.7rem;
+    background: #e9ecef;
+    padding: 3px 8px;
+    border-radius: 4px;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: #495057;
+}
+
+
+.nav-container {
+    display: flex;
+    justify-content: space-between; /* Pushes home left, dropdown right */
+    align-items: center;
+    padding: 10px 25px;
+    background-color: #f8f9fa;
+    border-bottom: 2px solid #dee2e6;
+    font-family: sans-serif;
+}
+
+/* Style the Home Icon */
+.home-icon {
+    font-size: 1.8rem;
+    text-decoration: none;
+    color: #004a99;
+    transition: transform 0.2s;
+}
+
+.home-icon:hover {
+    transform: scale(1.2);
+    color: #003366;
+}
+
+/* Group the label and select together on the right */
+.nav-dropdown-group {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.nav-dropdown-group label {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #495057;
+}

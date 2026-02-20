@@ -1,0 +1,697 @@
+<form name="aform">
+<script type="text/javascript">
+<!--
+function gotoView() {
+    selnum = document.aform.groups.selectedIndex;
+    pagename = document.aform.groups[selnum].value;
+    window.location.href = pagename;
+}
+//-->
+</script>
+<table width="100%" border="0">
+<tbody><tr>
+<td width="60%" align="RIGHT">
+<small>Go To View:&nbsp;
+<select name="groups" size="1" onchange="return gotoView();">
+<option value="">-- Select a View --
+</option><option value="ACADEMIC_HISTORY_EVENT_ODS_target.html">ACADEMIC_HISTORY_EVENT
+</option></select>
+</small></td><td align="RIGHT"><small><b><a href="ODS_index.html">RETURN TO BANNER ODS META DATA REPORTS LIST</a></b></small></td></tr>
+<tr align="RIGHT"><td></td><td><small><b><a href="Common_ODS_index.html">Common Reporting View Reports</a></b></small></td></tr>
+</tbody></table><br>
+<center><b>
+Banner PROD<br>
+<a name="TITLE"></a>
+Reporting View Target: SPRIDEN</b><p>
+<table border="1" cellspacing="0" width="75%"><tbody><tr>
+<td bgcolor="#c0c0c0" bordercolor="#000000" width="25%" style="--darkreader-inline-bgcolor: var(--darkreader-background-c0c0c0, #3c4143);" data-darkreader-inline-bgcolor=""><small><b>Description
+</b></small></td><td><small>Person Identification Table</small></td></tr><tr>
+<td bgcolor="#c0c0c0" bordercolor="#000000" width="25%" style="--darkreader-inline-bgcolor: var(--darkreader-background-c0c0c0, #3c4143);" data-darkreader-inline-bgcolor=""><small><b>Key &amp; Frequency
+</b></small></td><td><small>Repeating, unlimited rows per user with SPRIDEN_CHANGE_IND null on current record.</small></td></tr><tr>
+<td bgcolor="#c0c0c0" bordercolor="#000000" width="25%" style="--darkreader-inline-bgcolor: var(--darkreader-background-c0c0c0, #3c4143);" data-darkreader-inline-bgcolor=""><small><b>Recommended Search Columns
+</b></small></td><td><small>SPRIDEN_PIDM, SPRIDEN_ID<br>More columns here</small></td></tr><tr>
+</tr></tbody></table></p></center><p>
+
+<!-- This section defines the column names. -->    
+<a name="SPRIDEN_PIDM"></a><a name="SPRIDEN_ID"></a><a name="SPRIDEN_LAST_NAME"></a><a name="SPRIDEN_MI"></a><a name="SPRIDEN_CHANGE_IND"></a><a name="SPRIDEN_ENTITY_IND"></a><a name="SPRIDEN_ACTIVITY_DATE"></a><a name="SPRIDEN_USER"></a><a name="SPRIDEN_ORIGIN"></a><a name="SPRIDEN_SEARCH_LAST_NAME"></a><a name="SPRIDEN_SEARCH_FIRST_NAME"></a><a name="SPRIDEN_SEARCH_MI"></a><a name="SPRIDEN_SOUNDEX_LAST_NAME"></a><a name="SPRIDEN_SOUNDEX_FIRST_NAME"></a><a name="SPRIDEN_NTYP_CODE"></a><a name="SPRIDEN_CREATE_USER"></a><a name="SPRIDEN_CREATE_DATE"></a><a name="SPRIDEN_DATA_ORIGIN"></a><a name="SPRIDEN_CREATE_FDMN_CODE"></a><a name="SPRIDEN_SURNAME_PREFIX"></a><a name="SPRIDEN_SURROGATE_ID"></a><a name="SPRIDEN_VERSION"></a><a name="SPRIDEN_USER_ID"></a><a name="SPRIDEN_VPDI_CODE"></a><table border="1" bgcolor="#FFFFFF" cellspacing="0" style="--darkreader-inline-bgcolor: var(--darkreader-background-ffffff, #181a1b);" data-darkreader-inline-bgcolor="">
+<tbody><tr><th bgcolor="#c0c0c0" bordercolor="#000000" style="--darkreader-inline-bgcolor: var(--darkreader-background-c0c0c0, #3c4143);" data-darkreader-inline-bgcolor=""><font color="#000000" face="Arial" size="2" style="--darkreader-inline-color: var(--darkreader-text-000000, #e8e6e3);" data-darkreader-inline-color="">Target Column</font></th>
+<th bgcolor="#c0c0c0" bordercolor="#000000" style="--darkreader-inline-bgcolor: var(--darkreader-background-c0c0c0, #3c4143);" data-darkreader-inline-bgcolor=""><font color="#000000" face="Arial" size="2" style="--darkreader-inline-color: var(--darkreader-text-000000, #e8e6e3);" data-darkreader-inline-color="">Business Definition</font></th>
+<th bgcolor="#c0c0c0" bordercolor="#000000" style="--darkreader-inline-bgcolor: var(--darkreader-background-c0c0c0, #3c4143);" data-darkreader-inline-bgcolor=""><font color="#000000" face="Arial" size="2" style="--darkreader-inline-color: var(--darkreader-text-000000, #e8e6e3);" data-darkreader-inline-color="">Database Data Type</font></th>
+<th bgcolor="#c0c0c0" bordercolor="#000000" style="--darkreader-inline-bgcolor: var(--darkreader-background-c0c0c0, #3c4143);" data-darkreader-inline-bgcolor=""><font color="#000000" face="Arial" size="2" style="--darkreader-inline-color: var(--darkreader-text-000000, #e8e6e3);" data-darkreader-inline-color="">Source Column</font></th>
+</tr>
+<tr valign="TOP">
+
+<td bordercolor="#c0c0c0"><font color="#000000" face="Arial" size="2" style="--darkreader-inline-color: var(--darkreader-text-000000, #e8e6e3);" data-darkreader-inline-color="">
+ADDRESS_SEQ_NUMBER
+</font>
+</td><td bordercolor="#c0c0c0"><font color="#000000" face="Arial" size="2" style="--darkreader-inline-color: var(--darkreader-text-000000, #e8e6e3);" data-darkreader-inline-color="">
+Sequence used to identify different addresses within the same address type.
+</font>
+</td><td bordercolor="#c0c0c0"><font color="#000000" face="Arial" size="2" style="--darkreader-inline-color: var(--darkreader-text-000000, #e8e6e3);" data-darkreader-inline-color="">
+NUMBER
+</font>
+</td><td bordercolor="#c0c0c0"><font color="#000000" face="Arial" size="2" style="--darkreader-inline-color: var(--darkreader-text-000000, #e8e6e3);" data-darkreader-inline-color="">
+</font><p><font color="#000000" face="Arial" size="2" style="--darkreader-inline-color: var(--darkreader-text-000000, #e8e6e3);" data-darkreader-inline-color=""><a href="SPRADDR_ODS_source.html"><font color="#000000" face="Arial" size="2" style="--darkreader-inline-color: var(--darkreader-text-000000, #e8e6e3);" data-darkreader-inline-color="">SPRADDR</font></a>
+</font>
+</p></td><td bordercolor="#c0c0c0"><font color="#000000" face="Arial" size="2" style="--darkreader-inline-color: var(--darkreader-text-000000, #e8e6e3);" data-darkreader-inline-color="">
+</font><p><font color="#000000" face="Arial" size="2" style="--darkreader-inline-color: var(--darkreader-text-000000, #e8e6e3);" data-darkreader-inline-color=""><a href="SPRADDR_ODS_source.html#SPRADDR_SEQNO"><font color="#000000" face="Arial" size="2" style="--darkreader-inline-color: var(--darkreader-text-000000, #e8e6e3);" data-darkreader-inline-color="">SPRADDR_SEQNO</font></a>
+</font>
+</p></td></tr>
+<tr valign="TOP">
+
+<td bordercolor="#c0c0c0"><font color="#000000" face="Arial" size="2" style="--darkreader-inline-color: var(--darkreader-text-000000, #e8e6e3);" data-darkreader-inline-color="">
+ADDRESS_TYPE
+</font>
+</td><td bordercolor="#c0c0c0"><font color="#000000" face="Arial" size="2" style="--darkreader-inline-color: var(--darkreader-text-000000, #e8e6e3);" data-darkreader-inline-color="">
+Type of address for this address record. For example, address types of mailing, temporary summer, billing and permanent.
+</font>
+</td><td bordercolor="#c0c0c0"><font color="#000000" face="Arial" size="2" style="--darkreader-inline-color: var(--darkreader-text-000000, #e8e6e3);" data-darkreader-inline-color="">
+VARCHAR2(63)
+</font>
+</td><td bordercolor="#c0c0c0"><font color="#000000" face="Arial" size="2" style="--darkreader-inline-color: var(--darkreader-text-000000, #e8e6e3);" data-darkreader-inline-color="">
+</font><p><font color="#000000" face="Arial" size="2" style="--darkreader-inline-color: var(--darkreader-text-000000, #e8e6e3);" data-darkreader-inline-color=""><a href="SPRADDR_ODS_source.html"><font color="#000000" face="Arial" size="2" style="--darkreader-inline-color: var(--darkreader-text-000000, #e8e6e3);" data-darkreader-inline-color="">SPRADDR</font></a>
+</font>
+</p></td><td bordercolor="#c0c0c0"><font color="#000000" face="Arial" size="2" style="--darkreader-inline-color: var(--darkreader-text-000000, #e8e6e3);" data-darkreader-inline-color="">
+</font><p><font color="#000000" face="Arial" size="2" style="--darkreader-inline-color: var(--darkreader-text-000000, #e8e6e3);" data-darkreader-inline-color=""><a href="SPRADDR_ODS_source.html#SPRADDR_ATYP_CODE"><font color="#000000" face="Arial" size="2" style="--darkreader-inline-color: var(--darkreader-text-000000, #e8e6e3);" data-darkreader-inline-color="">SPRADDR_ATYP_CODE</font></a>
+</font>
+</p></td></tr>
+<tr valign="TOP">
+
+<td bordercolor="#c0c0c0"><font color="#000000" face="Arial" size="2" style="--darkreader-inline-color: var(--darkreader-text-000000, #e8e6e3);" data-darkreader-inline-color="">
+ADDRESS_TYPE_DESC
+</font>
+</td><td bordercolor="#c0c0c0"><font color="#000000" face="Arial" size="2" style="--darkreader-inline-color: var(--darkreader-text-000000, #e8e6e3);" data-darkreader-inline-color="">
+Address type description.
+</font>
+</td><td bordercolor="#c0c0c0"><font color="#000000" face="Arial" size="2" style="--darkreader-inline-color: var(--darkreader-text-000000, #e8e6e3);" data-darkreader-inline-color="">
+VARCHAR2(255)
+</font>
+</td><td bordercolor="#c0c0c0"><font color="#000000" face="Arial" size="2" style="--darkreader-inline-color: var(--darkreader-text-000000, #e8e6e3);" data-darkreader-inline-color="">
+</font><p><font color="#000000" face="Arial" size="2" style="--darkreader-inline-color: var(--darkreader-text-000000, #e8e6e3);" data-darkreader-inline-color=""><a href="STVATYP_ODS_source.html"><font color="#000000" face="Arial" size="2" style="--darkreader-inline-color: var(--darkreader-text-000000, #e8e6e3);" data-darkreader-inline-color="">STVATYP</font></a>
+</font>
+</p></td><td bordercolor="#c0c0c0"><font color="#000000" face="Arial" size="2" style="--darkreader-inline-color: var(--darkreader-text-000000, #e8e6e3);" data-darkreader-inline-color="">
+</font><p><font color="#000000" face="Arial" size="2" style="--darkreader-inline-color: var(--darkreader-text-000000, #e8e6e3);" data-darkreader-inline-color=""><a href="STVATYP_ODS_source.html#STVATYP_DESC"><font color="#000000" face="Arial" size="2" style="--darkreader-inline-color: var(--darkreader-text-000000, #e8e6e3);" data-darkreader-inline-color="">STVATYP_DESC</font></a>
+</font>
+</p></td></tr>
+<tr valign="TOP">
+
+<td bordercolor="#c0c0c0"><font color="#000000" face="Arial" size="2" style="--darkreader-inline-color: var(--darkreader-text-000000, #e8e6e3);" data-darkreader-inline-color="">
+ADMINISTRATIVE_GROUP
+</font>
+</td><td bordercolor="#c0c0c0"><font color="#000000" face="Arial" size="2" style="--darkreader-inline-color: var(--darkreader-text-000000, #e8e6e3);" data-darkreader-inline-color="">
+Administrative-oriented identifier for the record used to determine access authorization to this record. Institution defined.
+</font>
+</td><td bordercolor="#c0c0c0"><font color="#000000" face="Arial" size="2" style="--darkreader-inline-color: var(--darkreader-text-000000, #e8e6e3);" data-darkreader-inline-color="">
+VARCHAR2(255)
+</font>
+</td><td bordercolor="#c0c0c0"><font color="#000000" face="Arial" size="2" style="--darkreader-inline-color: var(--darkreader-text-000000, #e8e6e3);" data-darkreader-inline-color="">
+</font><p><font color="#000000" face="Arial" size="2" style="--darkreader-inline-color: var(--darkreader-text-000000, #e8e6e3);" data-darkreader-inline-color=""><a href="NA_ODS_source.html"><font color="#000000" face="Arial" size="2" style="--darkreader-inline-color: var(--darkreader-text-000000, #e8e6e3);" data-darkreader-inline-color="">NA</font></a>
+</font>
+</p></td><td bordercolor="#c0c0c0"><font color="#000000" face="Arial" size="2" style="--darkreader-inline-color: var(--darkreader-text-000000, #e8e6e3);" data-darkreader-inline-color="">
+</font><p><font color="#000000" face="Arial" size="2" style="--darkreader-inline-color: var(--darkreader-text-000000, #e8e6e3);" data-darkreader-inline-color=""><a href="NA_ODS_source.html#NA"><font color="#000000" face="Arial" size="2" style="--darkreader-inline-color: var(--darkreader-text-000000, #e8e6e3);" data-darkreader-inline-color="">NA</font></a>
+</font>
+</p></td></tr>
+<tr valign="TOP">
+
+<td bordercolor="#c0c0c0"><font color="#000000" face="Arial" size="2" style="--darkreader-inline-color: var(--darkreader-text-000000, #e8e6e3);" data-darkreader-inline-color="">
+CARRIER_ROUTE
+</font>
+</td><td bordercolor="#c0c0c0"><font color="#000000" face="Arial" size="2" style="--darkreader-inline-color: var(--darkreader-text-000000, #e8e6e3);" data-darkreader-inline-color="">
+Address carrier route.
+</font>
+</td><td bordercolor="#c0c0c0"><font color="#000000" face="Arial" size="2" style="--darkreader-inline-color: var(--darkreader-text-000000, #e8e6e3);" data-darkreader-inline-color="">
+VARCHAR2(4)
+</font>
+</td><td bordercolor="#c0c0c0"><font color="#000000" face="Arial" size="2" style="--darkreader-inline-color: var(--darkreader-text-000000, #e8e6e3);" data-darkreader-inline-color="">
+</font><p><font color="#000000" face="Arial" size="2" style="--darkreader-inline-color: var(--darkreader-text-000000, #e8e6e3);" data-darkreader-inline-color=""><a href="SPRADDR_ODS_source.html"><font color="#000000" face="Arial" size="2" style="--darkreader-inline-color: var(--darkreader-text-000000, #e8e6e3);" data-darkreader-inline-color="">SPRADDR</font></a>
+</font>
+</p></td><td bordercolor="#c0c0c0"><font color="#000000" face="Arial" size="2" style="--darkreader-inline-color: var(--darkreader-text-000000, #e8e6e3);" data-darkreader-inline-color="">
+</font><p><font color="#000000" face="Arial" size="2" style="--darkreader-inline-color: var(--darkreader-text-000000, #e8e6e3);" data-darkreader-inline-color=""><a href="SPRADDR_ODS_source.html#SPRADDR_CARRIER_ROUTE"><font color="#000000" face="Arial" size="2" style="--darkreader-inline-color: var(--darkreader-text-000000, #e8e6e3);" data-darkreader-inline-color="">SPRADDR_CARRIER_ROUTE</font></a>
+</font>
+</p></td></tr>
+<tr valign="TOP">
+
+<td bordercolor="#c0c0c0"><font color="#000000" face="Arial" size="2" style="--darkreader-inline-color: var(--darkreader-text-000000, #e8e6e3);" data-darkreader-inline-color="">
+CITY
+</font>
+</td><td bordercolor="#c0c0c0"><font color="#000000" face="Arial" size="2" style="--darkreader-inline-color: var(--darkreader-text-000000, #e8e6e3);" data-darkreader-inline-color="">
+Address city, town or municipality.
+</font>
+</td><td bordercolor="#c0c0c0"><font color="#000000" face="Arial" size="2" style="--darkreader-inline-color: var(--darkreader-text-000000, #e8e6e3);" data-darkreader-inline-color="">
+VARCHAR2(63)
+</font>
+</td><td bordercolor="#c0c0c0"><font color="#000000" face="Arial" size="2" style="--darkreader-inline-color: var(--darkreader-text-000000, #e8e6e3);" data-darkreader-inline-color="">
+</font><p><font color="#000000" face="Arial" size="2" style="--darkreader-inline-color: var(--darkreader-text-000000, #e8e6e3);" data-darkreader-inline-color=""><a href="SPRADDR_ODS_source.html"><font color="#000000" face="Arial" size="2" style="--darkreader-inline-color: var(--darkreader-text-000000, #e8e6e3);" data-darkreader-inline-color="">SPRADDR</font></a>
+</font>
+</p></td><td bordercolor="#c0c0c0"><font color="#000000" face="Arial" size="2" style="--darkreader-inline-color: var(--darkreader-text-000000, #e8e6e3);" data-darkreader-inline-color="">
+</font><p><font color="#000000" face="Arial" size="2" style="--darkreader-inline-color: var(--darkreader-text-000000, #e8e6e3);" data-darkreader-inline-color=""><a href="SPRADDR_ODS_source.html#SPRADDR_CITY"><font color="#000000" face="Arial" size="2" style="--darkreader-inline-color: var(--darkreader-text-000000, #e8e6e3);" data-darkreader-inline-color="">SPRADDR_CITY</font></a>
+</font>
+</p></td></tr>
+<tr valign="TOP">
+
+<td bordercolor="#c0c0c0"><font color="#000000" face="Arial" size="2" style="--darkreader-inline-color: var(--darkreader-text-000000, #e8e6e3);" data-darkreader-inline-color="">
+CORRECTION_DIGIT
+</font>
+</td><td bordercolor="#c0c0c0"><font color="#000000" face="Arial" size="2" style="--darkreader-inline-color: var(--darkreader-text-000000, #e8e6e3);" data-darkreader-inline-color="">
+Correction digit associated with the address for bar code mailing.
+</font>
+</td><td bordercolor="#c0c0c0"><font color="#000000" face="Arial" size="2" style="--darkreader-inline-color: var(--darkreader-text-000000, #e8e6e3);" data-darkreader-inline-color="">
+NUMBER
+</font>
+</td><td bordercolor="#c0c0c0"><font color="#000000" face="Arial" size="2" style="--darkreader-inline-color: var(--darkreader-text-000000, #e8e6e3);" data-darkreader-inline-color="">
+</font><p><font color="#000000" face="Arial" size="2" style="--darkreader-inline-color: var(--darkreader-text-000000, #e8e6e3);" data-darkreader-inline-color=""><a href="SPRADDR_ODS_source.html"><font color="#000000" face="Arial" size="2" style="--darkreader-inline-color: var(--darkreader-text-000000, #e8e6e3);" data-darkreader-inline-color="">SPRADDR</font></a>
+</font>
+</p></td><td bordercolor="#c0c0c0"><font color="#000000" face="Arial" size="2" style="--darkreader-inline-color: var(--darkreader-text-000000, #e8e6e3);" data-darkreader-inline-color="">
+</font><p><font color="#000000" face="Arial" size="2" style="--darkreader-inline-color: var(--darkreader-text-000000, #e8e6e3);" data-darkreader-inline-color=""><a href="SPRADDR_ODS_source.html#SPRADDR_CORRECTION_DIGIT"><font color="#000000" face="Arial" size="2" style="--darkreader-inline-color: var(--darkreader-text-000000, #e8e6e3);" data-darkreader-inline-color="">SPRADDR_CORRECTION_DIGIT</font></a>
+</font>
+</p></td></tr>
+<tr valign="TOP">
+
+<td bordercolor="#c0c0c0"><font color="#000000" face="Arial" size="2" style="--darkreader-inline-color: var(--darkreader-text-000000, #e8e6e3);" data-darkreader-inline-color="">
+COUNTY
+</font>
+</td><td bordercolor="#c0c0c0"><font color="#000000" face="Arial" size="2" style="--darkreader-inline-color: var(--darkreader-text-000000, #e8e6e3);" data-darkreader-inline-color="">
+County for this address.
+</font>
+</td><td bordercolor="#c0c0c0"><font color="#000000" face="Arial" size="2" style="--darkreader-inline-color: var(--darkreader-text-000000, #e8e6e3);" data-darkreader-inline-color="">
+VARCHAR2(63)
+</font>
+</td><td bordercolor="#c0c0c0"><font color="#000000" face="Arial" size="2" style="--darkreader-inline-color: var(--darkreader-text-000000, #e8e6e3);" data-darkreader-inline-color="">
+</font><p><font color="#000000" face="Arial" size="2" style="--darkreader-inline-color: var(--darkreader-text-000000, #e8e6e3);" data-darkreader-inline-color=""><a href="SPRADDR_ODS_source.html"><font color="#000000" face="Arial" size="2" style="--darkreader-inline-color: var(--darkreader-text-000000, #e8e6e3);" data-darkreader-inline-color="">SPRADDR</font></a>
+</font>
+</p></td><td bordercolor="#c0c0c0"><font color="#000000" face="Arial" size="2" style="--darkreader-inline-color: var(--darkreader-text-000000, #e8e6e3);" data-darkreader-inline-color="">
+</font><p><font color="#000000" face="Arial" size="2" style="--darkreader-inline-color: var(--darkreader-text-000000, #e8e6e3);" data-darkreader-inline-color=""><a href="SPRADDR_ODS_source.html#SPRADDR_CNTY_CODE"><font color="#000000" face="Arial" size="2" style="--darkreader-inline-color: var(--darkreader-text-000000, #e8e6e3);" data-darkreader-inline-color="">SPRADDR_CNTY_CODE</font></a>
+</font>
+</p></td></tr>
+<tr valign="TOP">
+
+<td bordercolor="#c0c0c0"><font color="#000000" face="Arial" size="2" style="--darkreader-inline-color: var(--darkreader-text-000000, #e8e6e3);" data-darkreader-inline-color="">
+COUNTY_DESC
+</font>
+</td><td bordercolor="#c0c0c0"><font color="#000000" face="Arial" size="2" style="--darkreader-inline-color: var(--darkreader-text-000000, #e8e6e3);" data-darkreader-inline-color="">
+County name for the address.
+</font>
+</td><td bordercolor="#c0c0c0"><font color="#000000" face="Arial" size="2" style="--darkreader-inline-color: var(--darkreader-text-000000, #e8e6e3);" data-darkreader-inline-color="">
+VARCHAR2(255)
+</font>
+</td><td bordercolor="#c0c0c0"><font color="#000000" face="Arial" size="2" style="--darkreader-inline-color: var(--darkreader-text-000000, #e8e6e3);" data-darkreader-inline-color="">
+</font><p><font color="#000000" face="Arial" size="2" style="--darkreader-inline-color: var(--darkreader-text-000000, #e8e6e3);" data-darkreader-inline-color=""><a href="FUNCTION_ODS_source.html"><font color="#000000" face="Arial" size="2" style="--darkreader-inline-color: var(--darkreader-text-000000, #e8e6e3);" data-darkreader-inline-color="">FUNCTION</font></a>
+</font>
+</p></td><td bordercolor="#c0c0c0"><font color="#000000" face="Arial" size="2" style="--darkreader-inline-color: var(--darkreader-text-000000, #e8e6e3);" data-darkreader-inline-color="">
+</font><p><font color="#000000" face="Arial" size="2" style="--darkreader-inline-color: var(--darkreader-text-000000, #e8e6e3);" data-darkreader-inline-color=""><a href="FUNCTION_ODS_source.html#GOKODSF.F_GET_DESC"><font color="#000000" face="Arial" size="2" style="--darkreader-inline-color: var(--darkreader-text-000000, #e8e6e3);" data-darkreader-inline-color="">GOKODSF.F_GET_DESC</font></a>
+</font>
+</p></td></tr>
+<tr valign="TOP">
+
+<td bordercolor="#c0c0c0"><font color="#000000" face="Arial" size="2" style="--darkreader-inline-color: var(--darkreader-text-000000, #e8e6e3);" data-darkreader-inline-color="">
+DELIVERY_POINT
+</font>
+</td><td bordercolor="#c0c0c0"><font color="#000000" face="Arial" size="2" style="--darkreader-inline-color: var(--darkreader-text-000000, #e8e6e3);" data-darkreader-inline-color="">
+Delivery point associated with the address for barcode mailings.
+</font>
+</td><td bordercolor="#c0c0c0"><font color="#000000" face="Arial" size="2" style="--darkreader-inline-color: var(--darkreader-text-000000, #e8e6e3);" data-darkreader-inline-color="">
+NUMBER
+</font>
+</td><td bordercolor="#c0c0c0"><font color="#000000" face="Arial" size="2" style="--darkreader-inline-color: var(--darkreader-text-000000, #e8e6e3);" data-darkreader-inline-color="">
+</font><p><font color="#000000" face="Arial" size="2" style="--darkreader-inline-color: var(--darkreader-text-000000, #e8e6e3);" data-darkreader-inline-color=""><a href="SPRADDR_ODS_source.html"><font color="#000000" face="Arial" size="2" style="--darkreader-inline-color: var(--darkreader-text-000000, #e8e6e3);" data-darkreader-inline-color="">SPRADDR</font></a>
+</font>
+</p></td><td bordercolor="#c0c0c0"><font color="#000000" face="Arial" size="2" style="--darkreader-inline-color: var(--darkreader-text-000000, #e8e6e3);" data-darkreader-inline-color="">
+</font><p><font color="#000000" face="Arial" size="2" style="--darkreader-inline-color: var(--darkreader-text-000000, #e8e6e3);" data-darkreader-inline-color=""><a href="SPRADDR_ODS_source.html#SPRADDR_DELIVERY_POINT"><font color="#000000" face="Arial" size="2" style="--darkreader-inline-color: var(--darkreader-text-000000, #e8e6e3);" data-darkreader-inline-color="">SPRADDR_DELIVERY_POINT</font></a>
+</font>
+</p></td></tr>
+<tr valign="TOP">
+
+<td bordercolor="#c0c0c0"><font color="#000000" face="Arial" size="2" style="--darkreader-inline-color: var(--darkreader-text-000000, #e8e6e3);" data-darkreader-inline-color="">
+EDI_EQUIVALENT
+</font>
+</td><td bordercolor="#c0c0c0"><font color="#000000" face="Arial" size="2" style="--darkreader-inline-color: var(--darkreader-text-000000, #e8e6e3);" data-darkreader-inline-color="">
+EDI equivalent code used for electronic transfer of state or province or nation information. This might be used on transcripts for the person, vendor invoice, etc.
+</font>
+</td><td bordercolor="#c0c0c0"><font color="#000000" face="Arial" size="2" style="--darkreader-inline-color: var(--darkreader-text-000000, #e8e6e3);" data-darkreader-inline-color="">
+VARCHAR2(2)
+</font>
+</td><td bordercolor="#c0c0c0"><font color="#000000" face="Arial" size="2" style="--darkreader-inline-color: var(--darkreader-text-000000, #e8e6e3);" data-darkreader-inline-color="">
+</font><p><font color="#000000" face="Arial" size="2" style="--darkreader-inline-color: var(--darkreader-text-000000, #e8e6e3);" data-darkreader-inline-color=""><a href="STVNATN_ODS_source.html"><font color="#000000" face="Arial" size="2" style="--darkreader-inline-color: var(--darkreader-text-000000, #e8e6e3);" data-darkreader-inline-color="">STVNATN</font></a>
+</font>
+</p></td><td bordercolor="#c0c0c0"><font color="#000000" face="Arial" size="2" style="--darkreader-inline-color: var(--darkreader-text-000000, #e8e6e3);" data-darkreader-inline-color="">
+</font><p><font color="#000000" face="Arial" size="2" style="--darkreader-inline-color: var(--darkreader-text-000000, #e8e6e3);" data-darkreader-inline-color=""><a href="STVNATN_ODS_source.html#STVNATN_EDI_EQUIV"><font color="#000000" face="Arial" size="2" style="--darkreader-inline-color: var(--darkreader-text-000000, #e8e6e3);" data-darkreader-inline-color="">STVNATN_EDI_EQUIV</font></a>
+</font>
+</p></td></tr>
+<tr valign="TOP">
+
+<td bordercolor="#c0c0c0"><font color="#000000" face="Arial" size="2" style="--darkreader-inline-color: var(--darkreader-text-000000, #e8e6e3);" data-darkreader-inline-color="">
+ENRL_PLANNING_SERVICE
+</font>
+</td><td bordercolor="#c0c0c0"><font color="#000000" face="Arial" size="2" style="--darkreader-inline-color: var(--darkreader-text-000000, #e8e6e3);" data-darkreader-inline-color="">
+Enrollment planning service code based on the student's postal code. Used to provide a standard geographic region code for use in planning and research.
+</font>
+</td><td bordercolor="#c0c0c0"><font color="#000000" face="Arial" size="2" style="--darkreader-inline-color: var(--darkreader-text-000000, #e8e6e3);" data-darkreader-inline-color="">
+VARCHAR2(63)
+</font>
+</td><td bordercolor="#c0c0c0"><font color="#000000" face="Arial" size="2" style="--darkreader-inline-color: var(--darkreader-text-000000, #e8e6e3);" data-darkreader-inline-color="">
+</font><p><font color="#000000" face="Arial" size="2" style="--darkreader-inline-color: var(--darkreader-text-000000, #e8e6e3);" data-darkreader-inline-color=""><a href="FUNCTION_ODS_source.html"><font color="#000000" face="Arial" size="2" style="--darkreader-inline-color: var(--darkreader-text-000000, #e8e6e3);" data-darkreader-inline-color="">FUNCTION</font></a>
+</font>
+</p></td><td bordercolor="#c0c0c0"><font color="#000000" face="Arial" size="2" style="--darkreader-inline-color: var(--darkreader-text-000000, #e8e6e3);" data-darkreader-inline-color="">
+</font><p><font color="#000000" face="Arial" size="2" style="--darkreader-inline-color: var(--darkreader-text-000000, #e8e6e3);" data-darkreader-inline-color=""><a href="FUNCTION_ODS_source.html#F_EPSCCODE"><font color="#000000" face="Arial" size="2" style="--darkreader-inline-color: var(--darkreader-text-000000, #e8e6e3);" data-darkreader-inline-color="">F_EPSCCODE</font></a>
+</font>
+</p></td></tr>
+<tr valign="TOP">
+
+<td bordercolor="#c0c0c0"><font color="#000000" face="Arial" size="2" style="--darkreader-inline-color: var(--darkreader-text-000000, #e8e6e3);" data-darkreader-inline-color="">
+ENRL_PLANNING_SERVICE_DESC
+</font>
+</td><td bordercolor="#c0c0c0"><font color="#000000" face="Arial" size="2" style="--darkreader-inline-color: var(--darkreader-text-000000, #e8e6e3);" data-darkreader-inline-color="">
+Enrollment planning service description.
+</font>
+</td><td bordercolor="#c0c0c0"><font color="#000000" face="Arial" size="2" style="--darkreader-inline-color: var(--darkreader-text-000000, #e8e6e3);" data-darkreader-inline-color="">
+VARCHAR2(255)
+</font>
+</td><td bordercolor="#c0c0c0"><font color="#000000" face="Arial" size="2" style="--darkreader-inline-color: var(--darkreader-text-000000, #e8e6e3);" data-darkreader-inline-color="">
+</font><p><font color="#000000" face="Arial" size="2" style="--darkreader-inline-color: var(--darkreader-text-000000, #e8e6e3);" data-darkreader-inline-color=""><a href="FUNCTION_ODS_source.html"><font color="#000000" face="Arial" size="2" style="--darkreader-inline-color: var(--darkreader-text-000000, #e8e6e3);" data-darkreader-inline-color="">FUNCTION</font></a>
+</font>
+</p></td><td bordercolor="#c0c0c0"><font color="#000000" face="Arial" size="2" style="--darkreader-inline-color: var(--darkreader-text-000000, #e8e6e3);" data-darkreader-inline-color="">
+</font><p><font color="#000000" face="Arial" size="2" style="--darkreader-inline-color: var(--darkreader-text-000000, #e8e6e3);" data-darkreader-inline-color=""><a href="FUNCTION_ODS_source.html#GOKODSF.F_GET_DESC"><font color="#000000" face="Arial" size="2" style="--darkreader-inline-color: var(--darkreader-text-000000, #e8e6e3);" data-darkreader-inline-color="">GOKODSF.F_GET_DESC</font></a>
+</font>
+</p></td></tr>
+<tr valign="TOP">
+
+<td bordercolor="#c0c0c0"><font color="#000000" face="Arial" size="2" style="--darkreader-inline-color: var(--darkreader-text-000000, #e8e6e3);" data-darkreader-inline-color="">
+ENTITY_UID
+</font>
+</td><td bordercolor="#c0c0c0"><font color="#000000" face="Arial" size="2" style="--darkreader-inline-color: var(--darkreader-text-000000, #e8e6e3);" data-darkreader-inline-color="">
+System generated, unique, internal identification number assigned to this person or organization entity.
+</font>
+</td><td bordercolor="#c0c0c0"><font color="#000000" face="Arial" size="2" style="--darkreader-inline-color: var(--darkreader-text-000000, #e8e6e3);" data-darkreader-inline-color="">
+NUMBER
+</font>
+</td><td bordercolor="#c0c0c0"><font color="#000000" face="Arial" size="2" style="--darkreader-inline-color: var(--darkreader-text-000000, #e8e6e3);" data-darkreader-inline-color="">
+</font><p><font color="#000000" face="Arial" size="2" style="--darkreader-inline-color: var(--darkreader-text-000000, #e8e6e3);" data-darkreader-inline-color=""><a href="SPRIDEN_ODS_source.html"><font color="#000000" face="Arial" size="2" style="--darkreader-inline-color: var(--darkreader-text-000000, #e8e6e3);" data-darkreader-inline-color="">SPRIDEN</font></a>
+</font>
+</p></td><td bordercolor="#c0c0c0"><font color="#000000" face="Arial" size="2" style="--darkreader-inline-color: var(--darkreader-text-000000, #e8e6e3);" data-darkreader-inline-color="">
+</font><p><font color="#000000" face="Arial" size="2" style="--darkreader-inline-color: var(--darkreader-text-000000, #e8e6e3);" data-darkreader-inline-color=""><a href="SPRIDEN_ODS_source.html#SPRIDEN_PIDM"><font color="#000000" face="Arial" size="2" style="--darkreader-inline-color: var(--darkreader-text-000000, #e8e6e3);" data-darkreader-inline-color="">SPRIDEN_PIDM</font></a>
+</font>
+</p></td></tr>
+<tr valign="TOP">
+
+<td bordercolor="#c0c0c0"><font color="#000000" face="Arial" size="2" style="--darkreader-inline-color: var(--darkreader-text-000000, #e8e6e3);" data-darkreader-inline-color="">
+FEDERAL_REPORTING_CODE
+</font>
+</td><td bordercolor="#c0c0c0"><font color="#000000" face="Arial" size="2" style="--darkreader-inline-color: var(--darkreader-text-000000, #e8e6e3);" data-darkreader-inline-color="">
+Government determined code for the reporting state/province codes.
+</font>
+</td><td bordercolor="#c0c0c0"><font color="#000000" face="Arial" size="2" style="--darkreader-inline-color: var(--darkreader-text-000000, #e8e6e3);" data-darkreader-inline-color="">
+VARCHAR2(5)
+</font>
+</td><td bordercolor="#c0c0c0"><font color="#000000" face="Arial" size="2" style="--darkreader-inline-color: var(--darkreader-text-000000, #e8e6e3);" data-darkreader-inline-color="">
+</font><p><font color="#000000" face="Arial" size="2" style="--darkreader-inline-color: var(--darkreader-text-000000, #e8e6e3);" data-darkreader-inline-color=""><a href="STVSTAT_ODS_source.html"><font color="#000000" face="Arial" size="2" style="--darkreader-inline-color: var(--darkreader-text-000000, #e8e6e3);" data-darkreader-inline-color="">STVSTAT</font></a>
+</font>
+</p></td><td bordercolor="#c0c0c0"><font color="#000000" face="Arial" size="2" style="--darkreader-inline-color: var(--darkreader-text-000000, #e8e6e3);" data-darkreader-inline-color="">
+</font><p><font color="#000000" face="Arial" size="2" style="--darkreader-inline-color: var(--darkreader-text-000000, #e8e6e3);" data-darkreader-inline-color=""><a href="STVSTAT_ODS_source.html#STVSTAT_IPEDS_CDE"><font color="#000000" face="Arial" size="2" style="--darkreader-inline-color: var(--darkreader-text-000000, #e8e6e3);" data-darkreader-inline-color="">STVSTAT_IPEDS_CDE</font></a>
+</font>
+</p></td></tr>
+<tr valign="TOP">
+
+<td bordercolor="#c0c0c0"><font color="#000000" face="Arial" size="2" style="--darkreader-inline-color: var(--darkreader-text-000000, #e8e6e3);" data-darkreader-inline-color="">
+GEOGRAPHIC_REGION_COUNT
+</font>
+</td><td bordercolor="#c0c0c0"><font color="#000000" face="Arial" size="2" style="--darkreader-inline-color: var(--darkreader-text-000000, #e8e6e3);" data-darkreader-inline-color="">
+Count of geographic regions associated with an address record.
+</font>
+</td><td bordercolor="#c0c0c0"><font color="#000000" face="Arial" size="2" style="--darkreader-inline-color: var(--darkreader-text-000000, #e8e6e3);" data-darkreader-inline-color="">
+NUMBER
+</font>
+</td><td bordercolor="#c0c0c0"><font color="#000000" face="Arial" size="2" style="--darkreader-inline-color: var(--darkreader-text-000000, #e8e6e3);" data-darkreader-inline-color="">
+</font><p><font color="#000000" face="Arial" size="2" style="--darkreader-inline-color: var(--darkreader-text-000000, #e8e6e3);" data-darkreader-inline-color=""><a href="FUNCTION_ODS_source.html"><font color="#000000" face="Arial" size="2" style="--darkreader-inline-color: var(--darkreader-text-000000, #e8e6e3);" data-darkreader-inline-color="">FUNCTION</font></a>
+</font>
+</p></td><td bordercolor="#c0c0c0"><font color="#000000" face="Arial" size="2" style="--darkreader-inline-color: var(--darkreader-text-000000, #e8e6e3);" data-darkreader-inline-color="">
+</font><p><font color="#000000" face="Arial" size="2" style="--darkreader-inline-color: var(--darkreader-text-000000, #e8e6e3);" data-darkreader-inline-color=""><a href="FUNCTION_ODS_source.html#MGKFUNC.F_COUNT_GEOGRAPHIC_REGIONS"><font color="#000000" face="Arial" size="2" style="--darkreader-inline-color: var(--darkreader-text-000000, #e8e6e3);" data-darkreader-inline-color="">MGKFUNC.F_COUNT_GEOGRAPHIC_REGIONS</font></a>
+</font>
+</p></td></tr>
+<tr valign="TOP">
+
+<td bordercolor="#c0c0c0"><font color="#000000" face="Arial" size="2" style="--darkreader-inline-color: var(--darkreader-text-000000, #e8e6e3);" data-darkreader-inline-color="">
+HOUSE_NUMBER
+</font>
+</td><td bordercolor="#c0c0c0"><font color="#000000" face="Arial" size="2" style="--darkreader-inline-color: var(--darkreader-text-000000, #e8e6e3);" data-darkreader-inline-color="">
+House number associated with the persons address.
+</font>
+</td><td bordercolor="#c0c0c0"><font color="#000000" face="Arial" size="2" style="--darkreader-inline-color: var(--darkreader-text-000000, #e8e6e3);" data-darkreader-inline-color="">
+VARCHAR2(63)
+</font>
+</td><td bordercolor="#c0c0c0"><font color="#000000" face="Arial" size="2" style="--darkreader-inline-color: var(--darkreader-text-000000, #e8e6e3);" data-darkreader-inline-color="">
+</font><p><font color="#000000" face="Arial" size="2" style="--darkreader-inline-color: var(--darkreader-text-000000, #e8e6e3);" data-darkreader-inline-color=""><a href="SPRADDR_ODS_source.html"><font color="#000000" face="Arial" size="2" style="--darkreader-inline-color: var(--darkreader-text-000000, #e8e6e3);" data-darkreader-inline-color="">SPRADDR</font></a>
+</font>
+</p></td><td bordercolor="#c0c0c0"><font color="#000000" face="Arial" size="2" style="--darkreader-inline-color: var(--darkreader-text-000000, #e8e6e3);" data-darkreader-inline-color="">
+</font><p><font color="#000000" face="Arial" size="2" style="--darkreader-inline-color: var(--darkreader-text-000000, #e8e6e3);" data-darkreader-inline-color=""><a href="SPRADDR_ODS_source.html#SPRADDR_HOUSE_NUMBER"><font color="#000000" face="Arial" size="2" style="--darkreader-inline-color: var(--darkreader-text-000000, #e8e6e3);" data-darkreader-inline-color="">SPRADDR_HOUSE_NUMBER</font></a>
+</font>
+</p></td></tr>
+<tr valign="TOP">
+
+<td bordercolor="#c0c0c0"><font color="#000000" face="Arial" size="2" style="--darkreader-inline-color: var(--darkreader-text-000000, #e8e6e3);" data-darkreader-inline-color="">
+ID
+</font>
+</td><td bordercolor="#c0c0c0"><font color="#000000" face="Arial" size="2" style="--darkreader-inline-color: var(--darkreader-text-000000, #e8e6e3);" data-darkreader-inline-color="">
+Identification number assigned to a person that is used externally for all communication and correspondence with the person.
+</font>
+</td><td bordercolor="#c0c0c0"><font color="#000000" face="Arial" size="2" style="--darkreader-inline-color: var(--darkreader-text-000000, #e8e6e3);" data-darkreader-inline-color="">
+VARCHAR2(63)
+</font>
+</td><td bordercolor="#c0c0c0"><font color="#000000" face="Arial" size="2" style="--darkreader-inline-color: var(--darkreader-text-000000, #e8e6e3);" data-darkreader-inline-color="">
+</font><p><font color="#000000" face="Arial" size="2" style="--darkreader-inline-color: var(--darkreader-text-000000, #e8e6e3);" data-darkreader-inline-color=""><a href="SPRIDEN_ODS_source.html"><font color="#000000" face="Arial" size="2" style="--darkreader-inline-color: var(--darkreader-text-000000, #e8e6e3);" data-darkreader-inline-color="">SPRIDEN</font></a>
+</font>
+</p></td><td bordercolor="#c0c0c0"><font color="#000000" face="Arial" size="2" style="--darkreader-inline-color: var(--darkreader-text-000000, #e8e6e3);" data-darkreader-inline-color="">
+</font><p><font color="#000000" face="Arial" size="2" style="--darkreader-inline-color: var(--darkreader-text-000000, #e8e6e3);" data-darkreader-inline-color=""><a href="SPRIDEN_ODS_source.html#SPRIDEN_ID"><font color="#000000" face="Arial" size="2" style="--darkreader-inline-color: var(--darkreader-text-000000, #e8e6e3);" data-darkreader-inline-color="">SPRIDEN_ID</font></a>
+</font>
+</p></td></tr>
+<tr valign="TOP">
+
+<td bordercolor="#c0c0c0"><font color="#000000" face="Arial" size="2" style="--darkreader-inline-color: var(--darkreader-text-000000, #e8e6e3);" data-darkreader-inline-color="">
+MAILING_ADDRESS
+</font>
+</td><td bordercolor="#c0c0c0"><font color="#000000" face="Arial" size="2" style="--darkreader-inline-color: var(--darkreader-text-000000, #e8e6e3);" data-darkreader-inline-color="">
+Mailing address formatted as a typical North American address.
+</font>
+</td><td bordercolor="#c0c0c0"><font color="#000000" face="Arial" size="2" style="--darkreader-inline-color: var(--darkreader-text-000000, #e8e6e3);" data-darkreader-inline-color="">
+VARCHAR2(438)
+</font>
+</td><td bordercolor="#c0c0c0"><font color="#000000" face="Arial" size="2" style="--darkreader-inline-color: var(--darkreader-text-000000, #e8e6e3);" data-darkreader-inline-color="">
+</font><p><font color="#000000" face="Arial" size="2" style="--darkreader-inline-color: var(--darkreader-text-000000, #e8e6e3);" data-darkreader-inline-color=""><a href="FUNCTION_ODS_source.html"><font color="#000000" face="Arial" size="2" style="--darkreader-inline-color: var(--darkreader-text-000000, #e8e6e3);" data-darkreader-inline-color="">FUNCTION</font></a>
+</font>
+</p></td><td bordercolor="#c0c0c0"><font color="#000000" face="Arial" size="2" style="--darkreader-inline-color: var(--darkreader-text-000000, #e8e6e3);" data-darkreader-inline-color="">
+</font><p><font color="#000000" face="Arial" size="2" style="--darkreader-inline-color: var(--darkreader-text-000000, #e8e6e3);" data-darkreader-inline-color=""><a href="FUNCTION_ODS_source.html#GOKODSF.F_FORMAT_MAILING_ADDRESS"><font color="#000000" face="Arial" size="2" style="--darkreader-inline-color: var(--darkreader-text-000000, #e8e6e3);" data-darkreader-inline-color="">GOKODSF.F_FORMAT_MAILING_ADDRESS</font></a>
+</font>
+</p></td></tr>
+<tr valign="TOP">
+
+<td bordercolor="#c0c0c0"><font color="#000000" face="Arial" size="2" style="--darkreader-inline-color: var(--darkreader-text-000000, #e8e6e3);" data-darkreader-inline-color="">
+MAILING_ADDRESS_COUNTY
+</font>
+</td><td bordercolor="#c0c0c0"><font color="#000000" face="Arial" size="2" style="--darkreader-inline-color: var(--darkreader-text-000000, #e8e6e3);" data-darkreader-inline-color="">
+Mailing address formatted as a typical but including county name.
+</font>
+</td><td bordercolor="#c0c0c0"><font color="#000000" face="Arial" size="2" style="--darkreader-inline-color: var(--darkreader-text-000000, #e8e6e3);" data-darkreader-inline-color="">
+VARCHAR2(438)
+</font>
+</td><td bordercolor="#c0c0c0"><font color="#000000" face="Arial" size="2" style="--darkreader-inline-color: var(--darkreader-text-000000, #e8e6e3);" data-darkreader-inline-color="">
+</font><p><font color="#000000" face="Arial" size="2" style="--darkreader-inline-color: var(--darkreader-text-000000, #e8e6e3);" data-darkreader-inline-color=""><a href="FUNCTION_ODS_source.html"><font color="#000000" face="Arial" size="2" style="--darkreader-inline-color: var(--darkreader-text-000000, #e8e6e3);" data-darkreader-inline-color="">FUNCTION</font></a>
+</font>
+</p></td><td bordercolor="#c0c0c0"><font color="#000000" face="Arial" size="2" style="--darkreader-inline-color: var(--darkreader-text-000000, #e8e6e3);" data-darkreader-inline-color="">
+</font><p><font color="#000000" face="Arial" size="2" style="--darkreader-inline-color: var(--darkreader-text-000000, #e8e6e3);" data-darkreader-inline-color=""><a href="FUNCTION_ODS_source.html#GOKODSF.F_FORMAT_MAILING_ADDRESS"><font color="#000000" face="Arial" size="2" style="--darkreader-inline-color: var(--darkreader-text-000000, #e8e6e3);" data-darkreader-inline-color="">GOKODSF.F_FORMAT_MAILING_ADDRESS</font></a>
+</font>
+</p></td></tr>
+<tr valign="TOP">
+
+<td bordercolor="#c0c0c0"><font color="#000000" face="Arial" size="2" style="--darkreader-inline-color: var(--darkreader-text-000000, #e8e6e3);" data-darkreader-inline-color="">
+MULTI_SOURCE
+</font>
+</td><td bordercolor="#c0c0c0"><font color="#000000" face="Arial" size="2" style="--darkreader-inline-color: var(--darkreader-text-000000, #e8e6e3);" data-darkreader-inline-color="">
+Institution value for the record when the optional multi-institution facility feature has been applied.
+</font>
+</td><td bordercolor="#c0c0c0"><font color="#000000" face="Arial" size="2" style="--darkreader-inline-color: var(--darkreader-text-000000, #e8e6e3);" data-darkreader-inline-color="">
+VARCHAR2(63)
+</font>
+</td><td bordercolor="#c0c0c0"><font color="#000000" face="Arial" size="2" style="--darkreader-inline-color: var(--darkreader-text-000000, #e8e6e3);" data-darkreader-inline-color="">
+</font><p><font color="#000000" face="Arial" size="2" style="--darkreader-inline-color: var(--darkreader-text-000000, #e8e6e3);" data-darkreader-inline-color=""><a href="NA_ODS_source.html"><font color="#000000" face="Arial" size="2" style="--darkreader-inline-color: var(--darkreader-text-000000, #e8e6e3);" data-darkreader-inline-color="">NA</font></a>
+</font>
+</p></td><td bordercolor="#c0c0c0"><font color="#000000" face="Arial" size="2" style="--darkreader-inline-color: var(--darkreader-text-000000, #e8e6e3);" data-darkreader-inline-color="">
+</font><p><font color="#000000" face="Arial" size="2" style="--darkreader-inline-color: var(--darkreader-text-000000, #e8e6e3);" data-darkreader-inline-color=""><a href="NA_ODS_source.html#NA"><font color="#000000" face="Arial" size="2" style="--darkreader-inline-color: var(--darkreader-text-000000, #e8e6e3);" data-darkreader-inline-color="">NA</font></a>
+</font>
+</p></td></tr>
+<tr valign="TOP">
+
+<td bordercolor="#c0c0c0"><font color="#000000" face="Arial" size="2" style="--darkreader-inline-color: var(--darkreader-text-000000, #e8e6e3);" data-darkreader-inline-color="">
+MULTI_SOURCE_DESC
+</font>
+</td><td bordercolor="#c0c0c0"><font color="#000000" face="Arial" size="2" style="--darkreader-inline-color: var(--darkreader-text-000000, #e8e6e3);" data-darkreader-inline-color="">
+Institution description when the optional multi-institution facility feature has been applied.
+</font>
+</td><td bordercolor="#c0c0c0"><font color="#000000" face="Arial" size="2" style="--darkreader-inline-color: var(--darkreader-text-000000, #e8e6e3);" data-darkreader-inline-color="">
+VARCHAR2(255)
+</font>
+</td><td bordercolor="#c0c0c0"><font color="#000000" face="Arial" size="2" style="--darkreader-inline-color: var(--darkreader-text-000000, #e8e6e3);" data-darkreader-inline-color="">
+</font><p><font color="#000000" face="Arial" size="2" style="--darkreader-inline-color: var(--darkreader-text-000000, #e8e6e3);" data-darkreader-inline-color=""><a href="NA_ODS_source.html"><font color="#000000" face="Arial" size="2" style="--darkreader-inline-color: var(--darkreader-text-000000, #e8e6e3);" data-darkreader-inline-color="">NA</font></a>
+</font>
+</p></td><td bordercolor="#c0c0c0"><font color="#000000" face="Arial" size="2" style="--darkreader-inline-color: var(--darkreader-text-000000, #e8e6e3);" data-darkreader-inline-color="">
+</font><p><font color="#000000" face="Arial" size="2" style="--darkreader-inline-color: var(--darkreader-text-000000, #e8e6e3);" data-darkreader-inline-color=""><a href="NA_ODS_source.html#NA"><font color="#000000" face="Arial" size="2" style="--darkreader-inline-color: var(--darkreader-text-000000, #e8e6e3);" data-darkreader-inline-color="">NA</font></a>
+</font>
+</p></td></tr>
+<tr valign="TOP">
+
+<td bordercolor="#c0c0c0"><font color="#000000" face="Arial" size="2" style="--darkreader-inline-color: var(--darkreader-text-000000, #e8e6e3);" data-darkreader-inline-color="">
+NAME
+</font>
+</td><td bordercolor="#c0c0c0"><font color="#000000" face="Arial" size="2" style="--darkreader-inline-color: var(--darkreader-text-000000, #e8e6e3);" data-darkreader-inline-color="">
+Name of the person (last name, first name, middle initial) or organization.
+</font>
+</td><td bordercolor="#c0c0c0"><font color="#000000" face="Arial" size="2" style="--darkreader-inline-color: var(--darkreader-text-000000, #e8e6e3);" data-darkreader-inline-color="">
+VARCHAR2(255)
+</font>
+</td><td bordercolor="#c0c0c0"><font color="#000000" face="Arial" size="2" style="--darkreader-inline-color: var(--darkreader-text-000000, #e8e6e3);" data-darkreader-inline-color="">
+</font><p><font color="#000000" face="Arial" size="2" style="--darkreader-inline-color: var(--darkreader-text-000000, #e8e6e3);" data-darkreader-inline-color=""><a href="FUNCTION_ODS_source.html"><font color="#000000" face="Arial" size="2" style="--darkreader-inline-color: var(--darkreader-text-000000, #e8e6e3);" data-darkreader-inline-color="">FUNCTION</font></a>
+</font>
+</p></td><td bordercolor="#c0c0c0"><font color="#000000" face="Arial" size="2" style="--darkreader-inline-color: var(--darkreader-text-000000, #e8e6e3);" data-darkreader-inline-color="">
+</font><p><font color="#000000" face="Arial" size="2" style="--darkreader-inline-color: var(--darkreader-text-000000, #e8e6e3);" data-darkreader-inline-color=""><a href="FUNCTION_ODS_source.html#MGKFUNC.F_GET_PERSON_INFO"><font color="#000000" face="Arial" size="2" style="--darkreader-inline-color: var(--darkreader-text-000000, #e8e6e3);" data-darkreader-inline-color="">MGKFUNC.F_GET_PERSON_INFO</font></a>
+</font>
+</p></td></tr>
+<tr valign="TOP">
+
+<td bordercolor="#c0c0c0"><font color="#000000" face="Arial" size="2" style="--darkreader-inline-color: var(--darkreader-text-000000, #e8e6e3);" data-darkreader-inline-color="">
+NATION
+</font>
+</td><td bordercolor="#c0c0c0"><font color="#000000" face="Arial" size="2" style="--darkreader-inline-color: var(--darkreader-text-000000, #e8e6e3);" data-darkreader-inline-color="">
+Nation/country code associated with the address.
+</font>
+</td><td bordercolor="#c0c0c0"><font color="#000000" face="Arial" size="2" style="--darkreader-inline-color: var(--darkreader-text-000000, #e8e6e3);" data-darkreader-inline-color="">
+VARCHAR2(63)
+</font>
+</td><td bordercolor="#c0c0c0"><font color="#000000" face="Arial" size="2" style="--darkreader-inline-color: var(--darkreader-text-000000, #e8e6e3);" data-darkreader-inline-color="">
+</font><p><font color="#000000" face="Arial" size="2" style="--darkreader-inline-color: var(--darkreader-text-000000, #e8e6e3);" data-darkreader-inline-color=""><a href="SPRADDR_ODS_source.html"><font color="#000000" face="Arial" size="2" style="--darkreader-inline-color: var(--darkreader-text-000000, #e8e6e3);" data-darkreader-inline-color="">SPRADDR</font></a>
+</font>
+</p></td><td bordercolor="#c0c0c0"><font color="#000000" face="Arial" size="2" style="--darkreader-inline-color: var(--darkreader-text-000000, #e8e6e3);" data-darkreader-inline-color="">
+</font><p><font color="#000000" face="Arial" size="2" style="--darkreader-inline-color: var(--darkreader-text-000000, #e8e6e3);" data-darkreader-inline-color=""><a href="SPRADDR_ODS_source.html#SPRADDR_NATN_CODE"><font color="#000000" face="Arial" size="2" style="--darkreader-inline-color: var(--darkreader-text-000000, #e8e6e3);" data-darkreader-inline-color="">SPRADDR_NATN_CODE</font></a>
+</font>
+</p></td></tr>
+<tr valign="TOP">
+
+<td bordercolor="#c0c0c0"><font color="#000000" face="Arial" size="2" style="--darkreader-inline-color: var(--darkreader-text-000000, #e8e6e3);" data-darkreader-inline-color="">
+NATION_DESC
+</font>
+</td><td bordercolor="#c0c0c0"><font color="#000000" face="Arial" size="2" style="--darkreader-inline-color: var(--darkreader-text-000000, #e8e6e3);" data-darkreader-inline-color="">
+Address nation/country description.
+</font>
+</td><td bordercolor="#c0c0c0"><font color="#000000" face="Arial" size="2" style="--darkreader-inline-color: var(--darkreader-text-000000, #e8e6e3);" data-darkreader-inline-color="">
+VARCHAR2(255)
+</font>
+</td><td bordercolor="#c0c0c0"><font color="#000000" face="Arial" size="2" style="--darkreader-inline-color: var(--darkreader-text-000000, #e8e6e3);" data-darkreader-inline-color="">
+</font><p><font color="#000000" face="Arial" size="2" style="--darkreader-inline-color: var(--darkreader-text-000000, #e8e6e3);" data-darkreader-inline-color=""><a href="STVNATN_ODS_source.html"><font color="#000000" face="Arial" size="2" style="--darkreader-inline-color: var(--darkreader-text-000000, #e8e6e3);" data-darkreader-inline-color="">STVNATN</font></a>
+</font>
+</p></td><td bordercolor="#c0c0c0"><font color="#000000" face="Arial" size="2" style="--darkreader-inline-color: var(--darkreader-text-000000, #e8e6e3);" data-darkreader-inline-color="">
+</font><p><font color="#000000" face="Arial" size="2" style="--darkreader-inline-color: var(--darkreader-text-000000, #e8e6e3);" data-darkreader-inline-color=""><a href="STVNATN_ODS_source.html#STVNATN_NATION"><font color="#000000" face="Arial" size="2" style="--darkreader-inline-color: var(--darkreader-text-000000, #e8e6e3);" data-darkreader-inline-color="">STVNATN_NATION</font></a>
+</font>
+</p></td></tr>
+<tr valign="TOP">
+
+<td bordercolor="#c0c0c0"><font color="#000000" face="Arial" size="2" style="--darkreader-inline-color: var(--darkreader-text-000000, #e8e6e3);" data-darkreader-inline-color="">
+NATION_EDI_EQUIVALENT
+</font>
+</td><td bordercolor="#c0c0c0"><font color="#000000" face="Arial" size="2" style="--darkreader-inline-color: var(--darkreader-text-000000, #e8e6e3);" data-darkreader-inline-color="">
+EDI equivalent code used for electronic transfer of country information. This might be used on transcripts for the person, vendor invoice, etc.
+</font>
+</td><td bordercolor="#c0c0c0"><font color="#000000" face="Arial" size="2" style="--darkreader-inline-color: var(--darkreader-text-000000, #e8e6e3);" data-darkreader-inline-color="">
+VARCHAR2(2)
+</font>
+</td><td bordercolor="#c0c0c0"><font color="#000000" face="Arial" size="2" style="--darkreader-inline-color: var(--darkreader-text-000000, #e8e6e3);" data-darkreader-inline-color="">
+</font><p><font color="#000000" face="Arial" size="2" style="--darkreader-inline-color: var(--darkreader-text-000000, #e8e6e3);" data-darkreader-inline-color=""><a href="STVNATN_ODS_source.html"><font color="#000000" face="Arial" size="2" style="--darkreader-inline-color: var(--darkreader-text-000000, #e8e6e3);" data-darkreader-inline-color="">STVNATN</font></a>
+</font>
+</p></td><td bordercolor="#c0c0c0"><font color="#000000" face="Arial" size="2" style="--darkreader-inline-color: var(--darkreader-text-000000, #e8e6e3);" data-darkreader-inline-color="">
+</font><p><font color="#000000" face="Arial" size="2" style="--darkreader-inline-color: var(--darkreader-text-000000, #e8e6e3);" data-darkreader-inline-color=""><a href="STVNATN_ODS_source.html#STVNATN_EDI_EQUIV"><font color="#000000" face="Arial" size="2" style="--darkreader-inline-color: var(--darkreader-text-000000, #e8e6e3);" data-darkreader-inline-color="">STVNATN_EDI_EQUIV</font></a>
+</font>
+</p></td></tr>
+<tr valign="TOP">
+
+<td bordercolor="#c0c0c0"><font color="#000000" face="Arial" size="2" style="--darkreader-inline-color: var(--darkreader-text-000000, #e8e6e3);" data-darkreader-inline-color="">
+NATION_ISO_CODE
+</font>
+</td><td bordercolor="#c0c0c0"><font color="#000000" face="Arial" size="2" style="--darkreader-inline-color: var(--darkreader-text-000000, #e8e6e3);" data-darkreader-inline-color="">
+Three character International Standards Organization (ISO) Code associated with the nation code.
+</font>
+</td><td bordercolor="#c0c0c0"><font color="#000000" face="Arial" size="2" style="--darkreader-inline-color: var(--darkreader-text-000000, #e8e6e3);" data-darkreader-inline-color="">
+VARCHAR2(3)
+</font>
+</td><td bordercolor="#c0c0c0"><font color="#000000" face="Arial" size="2" style="--darkreader-inline-color: var(--darkreader-text-000000, #e8e6e3);" data-darkreader-inline-color="">
+</font><p><font color="#000000" face="Arial" size="2" style="--darkreader-inline-color: var(--darkreader-text-000000, #e8e6e3);" data-darkreader-inline-color=""><a href="STVNATN_ODS_source.html"><font color="#000000" face="Arial" size="2" style="--darkreader-inline-color: var(--darkreader-text-000000, #e8e6e3);" data-darkreader-inline-color="">STVNATN</font></a>
+</font>
+</p></td><td bordercolor="#c0c0c0"><font color="#000000" face="Arial" size="2" style="--darkreader-inline-color: var(--darkreader-text-000000, #e8e6e3);" data-darkreader-inline-color="">
+</font><p><font color="#000000" face="Arial" size="2" style="--darkreader-inline-color: var(--darkreader-text-000000, #e8e6e3);" data-darkreader-inline-color=""><a href="STVNATN_ODS_source.html#STVNATN_SCOD_CODE_ISO"><font color="#000000" face="Arial" size="2" style="--darkreader-inline-color: var(--darkreader-text-000000, #e8e6e3);" data-darkreader-inline-color="">STVNATN_SCOD_CODE_ISO</font></a>
+</font>
+</p></td></tr>
+<tr valign="TOP">
+
+<td bordercolor="#c0c0c0"><font color="#000000" face="Arial" size="2" style="--darkreader-inline-color: var(--darkreader-text-000000, #e8e6e3);" data-darkreader-inline-color="">
+POSTAL_CODE
+</font>
+</td><td bordercolor="#c0c0c0"><font color="#000000" face="Arial" size="2" style="--darkreader-inline-color: var(--darkreader-text-000000, #e8e6e3);" data-darkreader-inline-color="">
+Address postal code.
+</font>
+</td><td bordercolor="#c0c0c0"><font color="#000000" face="Arial" size="2" style="--darkreader-inline-color: var(--darkreader-text-000000, #e8e6e3);" data-darkreader-inline-color="">
+VARCHAR2(63)
+</font>
+</td><td bordercolor="#c0c0c0"><font color="#000000" face="Arial" size="2" style="--darkreader-inline-color: var(--darkreader-text-000000, #e8e6e3);" data-darkreader-inline-color="">
+</font><p><font color="#000000" face="Arial" size="2" style="--darkreader-inline-color: var(--darkreader-text-000000, #e8e6e3);" data-darkreader-inline-color=""><a href="SPRADDR_ODS_source.html"><font color="#000000" face="Arial" size="2" style="--darkreader-inline-color: var(--darkreader-text-000000, #e8e6e3);" data-darkreader-inline-color="">SPRADDR</font></a>
+</font>
+</p></td><td bordercolor="#c0c0c0"><font color="#000000" face="Arial" size="2" style="--darkreader-inline-color: var(--darkreader-text-000000, #e8e6e3);" data-darkreader-inline-color="">
+</font><p><font color="#000000" face="Arial" size="2" style="--darkreader-inline-color: var(--darkreader-text-000000, #e8e6e3);" data-darkreader-inline-color=""><a href="SPRADDR_ODS_source.html#SPRADDR_ZIP"><font color="#000000" face="Arial" size="2" style="--darkreader-inline-color: var(--darkreader-text-000000, #e8e6e3);" data-darkreader-inline-color="">SPRADDR_ZIP</font></a>
+</font>
+</p></td></tr>
+<tr valign="TOP">
+
+<td bordercolor="#c0c0c0"><font color="#000000" face="Arial" size="2" style="--darkreader-inline-color: var(--darkreader-text-000000, #e8e6e3);" data-darkreader-inline-color="">
+PREFERRED_ADDRESS_IND
+</font>
+</td><td bordercolor="#c0c0c0"><font color="#000000" face="Arial" size="2" style="--darkreader-inline-color: var(--darkreader-text-000000, #e8e6e3);" data-darkreader-inline-color="">
+Indicates whether this active address is the person or entity's preferred address.
+</font>
+</td><td bordercolor="#c0c0c0"><font color="#000000" face="Arial" size="2" style="--darkreader-inline-color: var(--darkreader-text-000000, #e8e6e3);" data-darkreader-inline-color="">
+VARCHAR2(1)
+</font>
+</td><td bordercolor="#c0c0c0"><font color="#000000" face="Arial" size="2" style="--darkreader-inline-color: var(--darkreader-text-000000, #e8e6e3);" data-darkreader-inline-color="">
+</font><p><font color="#000000" face="Arial" size="2" style="--darkreader-inline-color: var(--darkreader-text-000000, #e8e6e3);" data-darkreader-inline-color=""><a href="FUNCTION_ODS_source.html"><font color="#000000" face="Arial" size="2" style="--darkreader-inline-color: var(--darkreader-text-000000, #e8e6e3);" data-darkreader-inline-color="">FUNCTION</font></a>
+</font>
+</p></td><td bordercolor="#c0c0c0"><font color="#000000" face="Arial" size="2" style="--darkreader-inline-color: var(--darkreader-text-000000, #e8e6e3);" data-darkreader-inline-color="">
+</font><p><font color="#000000" face="Arial" size="2" style="--darkreader-inline-color: var(--darkreader-text-000000, #e8e6e3);" data-darkreader-inline-color=""><a href="FUNCTION_ODS_source.html#GOKODSF.F_PREFERRED_ADDRESS_IND"><font color="#000000" face="Arial" size="2" style="--darkreader-inline-color: var(--darkreader-text-000000, #e8e6e3);" data-darkreader-inline-color="">GOKODSF.F_PREFERRED_ADDRESS_IND</font></a>
+</font>
+</p></td></tr>
+<tr valign="TOP">
+
+<td bordercolor="#c0c0c0"><font color="#000000" face="Arial" size="2" style="--darkreader-inline-color: var(--darkreader-text-000000, #e8e6e3);" data-darkreader-inline-color="">
+PROCESS_GROUP
+</font>
+</td><td bordercolor="#c0c0c0"><font color="#000000" face="Arial" size="2" style="--darkreader-inline-color: var(--darkreader-text-000000, #e8e6e3);" data-darkreader-inline-color="">
+Process-oriented identifier for the record used to determine access authorization to this record. Institution defined.
+</font>
+</td><td bordercolor="#c0c0c0"><font color="#000000" face="Arial" size="2" style="--darkreader-inline-color: var(--darkreader-text-000000, #e8e6e3);" data-darkreader-inline-color="">
+VARCHAR2(255)
+</font>
+</td><td bordercolor="#c0c0c0"><font color="#000000" face="Arial" size="2" style="--darkreader-inline-color: var(--darkreader-text-000000, #e8e6e3);" data-darkreader-inline-color="">
+</font><p><font color="#000000" face="Arial" size="2" style="--darkreader-inline-color: var(--darkreader-text-000000, #e8e6e3);" data-darkreader-inline-color=""><a href="NA_ODS_source.html"><font color="#000000" face="Arial" size="2" style="--darkreader-inline-color: var(--darkreader-text-000000, #e8e6e3);" data-darkreader-inline-color="">NA</font></a>
+</font>
+</p></td><td bordercolor="#c0c0c0"><font color="#000000" face="Arial" size="2" style="--darkreader-inline-color: var(--darkreader-text-000000, #e8e6e3);" data-darkreader-inline-color="">
+</font><p><font color="#000000" face="Arial" size="2" style="--darkreader-inline-color: var(--darkreader-text-000000, #e8e6e3);" data-darkreader-inline-color=""><a href="NA_ODS_source.html#NA"><font color="#000000" face="Arial" size="2" style="--darkreader-inline-color: var(--darkreader-text-000000, #e8e6e3);" data-darkreader-inline-color="">NA</font></a>
+</font>
+</p></td></tr>
+<tr valign="TOP">
+
+<td bordercolor="#c0c0c0"><font color="#000000" face="Arial" size="2" style="--darkreader-inline-color: var(--darkreader-text-000000, #e8e6e3);" data-darkreader-inline-color="">
+STATE_PROVINCE
+</font>
+</td><td bordercolor="#c0c0c0"><font color="#000000" face="Arial" size="2" style="--darkreader-inline-color: var(--darkreader-text-000000, #e8e6e3);" data-darkreader-inline-color="">
+State or province associated with this address.
+</font>
+</td><td bordercolor="#c0c0c0"><font color="#000000" face="Arial" size="2" style="--darkreader-inline-color: var(--darkreader-text-000000, #e8e6e3);" data-darkreader-inline-color="">
+VARCHAR2(63)
+</font>
+</td><td bordercolor="#c0c0c0"><font color="#000000" face="Arial" size="2" style="--darkreader-inline-color: var(--darkreader-text-000000, #e8e6e3);" data-darkreader-inline-color="">
+</font><p><font color="#000000" face="Arial" size="2" style="--darkreader-inline-color: var(--darkreader-text-000000, #e8e6e3);" data-darkreader-inline-color=""><a href="SPRADDR_ODS_source.html"><font color="#000000" face="Arial" size="2" style="--darkreader-inline-color: var(--darkreader-text-000000, #e8e6e3);" data-darkreader-inline-color="">SPRADDR</font></a>
+</font>
+</p></td><td bordercolor="#c0c0c0"><font color="#000000" face="Arial" size="2" style="--darkreader-inline-color: var(--darkreader-text-000000, #e8e6e3);" data-darkreader-inline-color="">
+</font><p><font color="#000000" face="Arial" size="2" style="--darkreader-inline-color: var(--darkreader-text-000000, #e8e6e3);" data-darkreader-inline-color=""><a href="SPRADDR_ODS_source.html#SPRADDR_STAT_CODE"><font color="#000000" face="Arial" size="2" style="--darkreader-inline-color: var(--darkreader-text-000000, #e8e6e3);" data-darkreader-inline-color="">SPRADDR_STAT_CODE</font></a>
+</font>
+</p></td></tr>
+<tr valign="TOP">
+
+<td bordercolor="#c0c0c0"><font color="#000000" face="Arial" size="2" style="--darkreader-inline-color: var(--darkreader-text-000000, #e8e6e3);" data-darkreader-inline-color="">
+STATE_PROVINCE_DESC
+</font>
+</td><td bordercolor="#c0c0c0"><font color="#000000" face="Arial" size="2" style="--darkreader-inline-color: var(--darkreader-text-000000, #e8e6e3);" data-darkreader-inline-color="">
+State/province name.
+</font>
+</td><td bordercolor="#c0c0c0"><font color="#000000" face="Arial" size="2" style="--darkreader-inline-color: var(--darkreader-text-000000, #e8e6e3);" data-darkreader-inline-color="">
+VARCHAR2(255)
+</font>
+</td><td bordercolor="#c0c0c0"><font color="#000000" face="Arial" size="2" style="--darkreader-inline-color: var(--darkreader-text-000000, #e8e6e3);" data-darkreader-inline-color="">
+</font><p><font color="#000000" face="Arial" size="2" style="--darkreader-inline-color: var(--darkreader-text-000000, #e8e6e3);" data-darkreader-inline-color=""><a href="STVSTAT_ODS_source.html"><font color="#000000" face="Arial" size="2" style="--darkreader-inline-color: var(--darkreader-text-000000, #e8e6e3);" data-darkreader-inline-color="">STVSTAT</font></a>
+</font>
+</p></td><td bordercolor="#c0c0c0"><font color="#000000" face="Arial" size="2" style="--darkreader-inline-color: var(--darkreader-text-000000, #e8e6e3);" data-darkreader-inline-color="">
+</font><p><font color="#000000" face="Arial" size="2" style="--darkreader-inline-color: var(--darkreader-text-000000, #e8e6e3);" data-darkreader-inline-color=""><a href="STVSTAT_ODS_source.html#STVSTAT_DESC"><font color="#000000" face="Arial" size="2" style="--darkreader-inline-color: var(--darkreader-text-000000, #e8e6e3);" data-darkreader-inline-color="">STVSTAT_DESC</font></a>
+</font>
+</p></td></tr>
+<tr valign="TOP">
+
+<td bordercolor="#c0c0c0"><font color="#000000" face="Arial" size="2" style="--darkreader-inline-color: var(--darkreader-text-000000, #e8e6e3);" data-darkreader-inline-color="">
+STREET_LINE1
+</font>
+</td><td bordercolor="#c0c0c0"><font color="#000000" face="Arial" size="2" style="--darkreader-inline-color: var(--darkreader-text-000000, #e8e6e3);" data-darkreader-inline-color="">
+First line of the address.
+</font>
+</td><td bordercolor="#c0c0c0"><font color="#000000" face="Arial" size="2" style="--darkreader-inline-color: var(--darkreader-text-000000, #e8e6e3);" data-darkreader-inline-color="">
+VARCHAR2(255)
+</font>
+</td><td bordercolor="#c0c0c0"><font color="#000000" face="Arial" size="2" style="--darkreader-inline-color: var(--darkreader-text-000000, #e8e6e3);" data-darkreader-inline-color="">
+</font><p><font color="#000000" face="Arial" size="2" style="--darkreader-inline-color: var(--darkreader-text-000000, #e8e6e3);" data-darkreader-inline-color=""><a href="SPRADDR_ODS_source.html"><font color="#000000" face="Arial" size="2" style="--darkreader-inline-color: var(--darkreader-text-000000, #e8e6e3);" data-darkreader-inline-color="">SPRADDR</font></a>
+</font>
+</p></td><td bordercolor="#c0c0c0"><font color="#000000" face="Arial" size="2" style="--darkreader-inline-color: var(--darkreader-text-000000, #e8e6e3);" data-darkreader-inline-color="">
+</font><p><font color="#000000" face="Arial" size="2" style="--darkreader-inline-color: var(--darkreader-text-000000, #e8e6e3);" data-darkreader-inline-color=""><a href="SPRADDR_ODS_source.html#SPRADDR_STREET_LINE1"><font color="#000000" face="Arial" size="2" style="--darkreader-inline-color: var(--darkreader-text-000000, #e8e6e3);" data-darkreader-inline-color="">SPRADDR_STREET_LINE1</font></a>
+</font>
+</p></td></tr>
+<tr valign="TOP">
+
+<td bordercolor="#c0c0c0"><font color="#000000" face="Arial" size="2" style="--darkreader-inline-color: var(--darkreader-text-000000, #e8e6e3);" data-darkreader-inline-color="">
+STREET_LINE2
+</font>
+</td><td bordercolor="#c0c0c0"><font color="#000000" face="Arial" size="2" style="--darkreader-inline-color: var(--darkreader-text-000000, #e8e6e3);" data-darkreader-inline-color="">
+Second line of the address.
+</font>
+</td><td bordercolor="#c0c0c0"><font color="#000000" face="Arial" size="2" style="--darkreader-inline-color: var(--darkreader-text-000000, #e8e6e3);" data-darkreader-inline-color="">
+VARCHAR2(255)
+</font>
+</td><td bordercolor="#c0c0c0"><font color="#000000" face="Arial" size="2" style="--darkreader-inline-color: var(--darkreader-text-000000, #e8e6e3);" data-darkreader-inline-color="">
+</font><p><font color="#000000" face="Arial" size="2" style="--darkreader-inline-color: var(--darkreader-text-000000, #e8e6e3);" data-darkreader-inline-color=""><a href="SPRADDR_ODS_source.html"><font color="#000000" face="Arial" size="2" style="--darkreader-inline-color: var(--darkreader-text-000000, #e8e6e3);" data-darkreader-inline-color="">SPRADDR</font></a>
+</font>
+</p></td><td bordercolor="#c0c0c0"><font color="#000000" face="Arial" size="2" style="--darkreader-inline-color: var(--darkreader-text-000000, #e8e6e3);" data-darkreader-inline-color="">
+</font><p><font color="#000000" face="Arial" size="2" style="--darkreader-inline-color: var(--darkreader-text-000000, #e8e6e3);" data-darkreader-inline-color=""><a href="SPRADDR_ODS_source.html#SPRADDR_STREET_LINE2"><font color="#000000" face="Arial" size="2" style="--darkreader-inline-color: var(--darkreader-text-000000, #e8e6e3);" data-darkreader-inline-color="">SPRADDR_STREET_LINE2</font></a>
+</font>
+</p></td></tr>
+<tr valign="TOP">
+
+<td bordercolor="#c0c0c0"><font color="#000000" face="Arial" size="2" style="--darkreader-inline-color: var(--darkreader-text-000000, #e8e6e3);" data-darkreader-inline-color="">
+STREET_LINE3
+</font>
+</td><td bordercolor="#c0c0c0"><font color="#000000" face="Arial" size="2" style="--darkreader-inline-color: var(--darkreader-text-000000, #e8e6e3);" data-darkreader-inline-color="">
+Third line of the address.
+</font>
+</td><td bordercolor="#c0c0c0"><font color="#000000" face="Arial" size="2" style="--darkreader-inline-color: var(--darkreader-text-000000, #e8e6e3);" data-darkreader-inline-color="">
+VARCHAR2(255)
+</font>
+</td><td bordercolor="#c0c0c0"><font color="#000000" face="Arial" size="2" style="--darkreader-inline-color: var(--darkreader-text-000000, #e8e6e3);" data-darkreader-inline-color="">
+</font><p><font color="#000000" face="Arial" size="2" style="--darkreader-inline-color: var(--darkreader-text-000000, #e8e6e3);" data-darkreader-inline-color=""><a href="SPRADDR_ODS_source.html"><font color="#000000" face="Arial" size="2" style="--darkreader-inline-color: var(--darkreader-text-000000, #e8e6e3);" data-darkreader-inline-color="">SPRADDR</font></a>
+</font>
+</p></td><td bordercolor="#c0c0c0"><font color="#000000" face="Arial" size="2" style="--darkreader-inline-color: var(--darkreader-text-000000, #e8e6e3);" data-darkreader-inline-color="">
+</font><p><font color="#000000" face="Arial" size="2" style="--darkreader-inline-color: var(--darkreader-text-000000, #e8e6e3);" data-darkreader-inline-color=""><a href="SPRADDR_ODS_source.html#SPRADDR_STREET_LINE3"><font color="#000000" face="Arial" size="2" style="--darkreader-inline-color: var(--darkreader-text-000000, #e8e6e3);" data-darkreader-inline-color="">SPRADDR_STREET_LINE3</font></a>
+</font>
+</p></td></tr>
+<tr valign="TOP">
+
+<td bordercolor="#c0c0c0"><font color="#000000" face="Arial" size="2" style="--darkreader-inline-color: var(--darkreader-text-000000, #e8e6e3);" data-darkreader-inline-color="">
+STREET_LINE4
+</font>
+</td><td bordercolor="#c0c0c0"><font color="#000000" face="Arial" size="2" style="--darkreader-inline-color: var(--darkreader-text-000000, #e8e6e3);" data-darkreader-inline-color="">
+Fourth line of the address.
+</font>
+</td><td bordercolor="#c0c0c0"><font color="#000000" face="Arial" size="2" style="--darkreader-inline-color: var(--darkreader-text-000000, #e8e6e3);" data-darkreader-inline-color="">
+VARCHAR2(255)
+</font>
+</td><td bordercolor="#c0c0c0"><font color="#000000" face="Arial" size="2" style="--darkreader-inline-color: var(--darkreader-text-000000, #e8e6e3);" data-darkreader-inline-color="">
+</font><p><font color="#000000" face="Arial" size="2" style="--darkreader-inline-color: var(--darkreader-text-000000, #e8e6e3);" data-darkreader-inline-color=""><a href="SPRADDR_ODS_source.html"><font color="#000000" face="Arial" size="2" style="--darkreader-inline-color: var(--darkreader-text-000000, #e8e6e3);" data-darkreader-inline-color="">SPRADDR</font></a>
+</font>
+</p></td><td bordercolor="#c0c0c0"><font color="#000000" face="Arial" size="2" style="--darkreader-inline-color: var(--darkreader-text-000000, #e8e6e3);" data-darkreader-inline-color="">
+</font><p><font color="#000000" face="Arial" size="2" style="--darkreader-inline-color: var(--darkreader-text-000000, #e8e6e3);" data-darkreader-inline-color=""><a href="SPRADDR_ODS_source.html#SPRADDR_STREET_LINE4"><font color="#000000" face="Arial" size="2" style="--darkreader-inline-color: var(--darkreader-text-000000, #e8e6e3);" data-darkreader-inline-color="">SPRADDR_STREET_LINE4</font></a>
+</font>
+</p></td></tr>
+</tbody></table>
+<br><br><small>Ver: 9.0</small>
+<!-- Page generated: 28-SEP-2018 16:44:59 -->
+<br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br>
+
+</p></form>

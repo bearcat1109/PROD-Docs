@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <title>Banner PROD: SPRIDEN</title>
+</head>
+<body>
+
+<div id="nav-placeholder" class="nav-container"></div>
+
+<script src="nav.js"></script>
+
+<main class="content">
+    <h1>Table: SPRIDEN</h1>
+    <p class="table-description">Stores name and ID information for all people - students, vendors, etc.</p>
+
+    <table class="data-table">
+        <thead>
+            <tr>
+                <th>Column Name</th>
+                <th>Data Type</th>
+                <th>Nullable</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>SPRIDEN_PIDM</strong></td>
+                <td>NUMBER(8)</td>
+                <td>No</td>
+                <td>Internal unique identifier for the person/entity.</td>
+            </tr>
+            <tr>
+                <td><strong>SPRIDEN_ID</strong></td>
+                <td>VARCHAR2(9)</td>
+                <td>No</td>
+                <td>The Banner ID (e.g., N00112233).</td>
+            </tr>
+            <tr>
+                <td><strong>SPRIDEN_LAST_NAME</strong></td>
+                <td>VARCHAR2(60)</td>
+                <td>No</td>
+                <td>Last name of the person.</td>
+            </tr>
+            <tr>
+                <td><strong>SPRIDEN_FIRST_NAME</strong></td>
+                <td>VARCHAR2(60)</td>
+                <td>Yes</td>
+                <td>First name of the person.</td>
+            </tr>
+            <tr>
+                <td><strong>SPRIDEN_MI</strong></td>
+                <td>VARCHAR2(60)</td>
+                <td>Yes</td>
+                <td>Middle name of the person. Can be initial.</td>
+            </tr>
+            <tr>
+                <td><strong>SPRIDEN_CHANGE_IND</strong></td>
+                <td>VARCHAR2(1)</td>
+                <td>Yes</td>
+                <td>If null, this row is the most current record. If N, this row is a historic record.</td>
+            </tr>
+        </tbody>
+    </table>
+</main>
+
+</body>
+</html>
