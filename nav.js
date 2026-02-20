@@ -63,3 +63,14 @@ document.addEventListener("DOMContentLoaded", function() {
 
     setTimeout(() => { Prism.highlightAll(); }, 100);
 });
+
+script.onload = function() {
+    const sqlScript = document.createElement('script');
+    sqlScript.src = 'https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-sql.min.js';
+    sqlScript.onload = function() {
+        // This is the magic line for GitHub Pages
+        console.log("Prism SQL loaded - highlighting now.");
+        Prism.highlightAll();
+    };
+    document.head.appendChild(sqlScript);
+};
