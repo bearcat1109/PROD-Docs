@@ -157,3 +157,80 @@ h1 { color: #000000; margin-bottom: 5px; }
     font-weight: 600;
     color: #495057;
 }
+
+
+
+/* Styling for code snippets. */
+
+.query-section {
+    margin-top: 50px;
+    padding-top: 20px;
+    border-top: 3px solid #004a99;
+}
+
+.code-container {
+    background-color: #282c34; /* Dark code background */
+    border-radius: 6px;
+    margin-bottom: 20px;
+    overflow: hidden;
+}
+
+.code-header {
+    background-color: #21252b;
+    padding: 8px 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #abb2bf;
+    font-size: 0.8rem;
+    font-family: sans-serif;
+}
+
+pre {
+    margin: 0;
+    padding: 15px;
+    overflow-x: auto; /* Adds scrollbar if query is too wide */
+}
+
+code {
+    font-family: 'Consolas', 'Monaco', 'Courier New', monospace;
+    /* color: #98c379; Greenish "code" color */
+    line-height: 1.5;
+}
+
+.copy-btn {
+    background: #4b5263;
+    border: none;
+    color: white;
+    padding: 4px 8px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.7rem;
+}
+
+.copy-btn:hover { background: #5c6370; }
+
+
+/* Styling for toast notifications */
+.toast-notification {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%) translateY(20px);
+    background-color: #323232;
+    color: #fff;
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    font-family: sans-serif;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    opacity: 0;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    z-index: 9999;
+    pointer-events: none; /* User can click "through" it */
+}
+
+.toast-notification.show {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+}

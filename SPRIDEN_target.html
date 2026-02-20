@@ -1,3 +1,6 @@
+<!-- SPRIDEN table target page --> 
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,6 +13,7 @@
 <div id="nav-placeholder" class="nav-container"></div>
 
 <script src="nav.js"></script>
+<script src="copy_code.js"></script>
 
 <main class="content">
     <h1>Table: SPRIDEN</h1>
@@ -61,9 +65,36 @@
                 <td>Yes</td>
                 <td>If null, this row is the most current record. If N, this row is a historic record.</td>
             </tr>
+            <tr>
+                <td><strong>SPRIDEN_ENTITY_IND</strong></td>
+                <td>VARCHAR2(1)</td>
+                <td>Yes</td>
+                <td>This field identifies if the person is a Person (P) , or non-person (C). Non-persons are usually vendors. Filtering on this = P is a good extra insurance step against non-persons in your query if only people are desired.</td>
+            </tr>
         </tbody>
     </table>
 </main>
+
+<section class="query-section">
+    <h2>Commonly Used Queries</h2>
+    <p>Use these snippets to quickly pull data from this table.</p>
+
+    <div class="code-container">
+        <div class="code-header">
+            <span>SQL: Find Current Name by ID</span>
+            <button class="copy-btn" onclick="copyCode('query1')">Copy</button>
+        </div>
+        <pre id="query1"><code class="language-sql">SELECT DISTINCT
+    spriden_id,
+    spriden_last_name,
+    spriden_first_name,
+    spriden_mi
+FROM
+    spriden
+WHERE
+    spriden_change_ind IS NULL;</code></pre>
+    </div>
+</section>
 
 </body>
 </html>
