@@ -73,6 +73,114 @@
                 <td>Yes</td>
                 <td>This field identifies if the person is a Person (P) , or non-person (C). Non-persons are usually vendors. Filtering on this = P is a good extra insurance step against non-persons in your query if only people are desired.</td>
             </tr>
+            <tr>
+                <td><strong>SPRIDEN_ACTIVITY_DATE</strong></td>
+                <td>DATE</td>
+                <td>No</td>
+                <td>Activity record on the row.</td>
+            </tr>
+            <tr>
+                <td><strong>SPRIDEN_USER</strong></td>
+                <td>VARCHAR2(30)</td>
+                <td>Yes</td>
+                <td>The user that most recently updated this record. Example: BERRESG</td>
+            </tr>
+            <tr>
+                <td><strong>SPRIDEN_ORIGIN</strong></td>
+                <td>VARCHAR2(30)</td>
+                <td>Yes</td>
+                <td>The name of the data source or "Banner Object" that was used to update the record.</td>
+            </tr>
+            <tr>
+                <td><strong>SPRIDEN_SEARCH_LAST_NAME</strong></td>
+                <td>VARCHAR2(60)</td>
+                <td>Yes</td>
+                <td>Last name field, but with all non-alphabet characters removed, and capitalized. In essence, UPPER(spriden_last_name).</td>
+            </tr>
+            <tr>
+                <td><strong>SPRIDEN_SEARCH_FIRST_NAME</strong></td>
+                <td>VARCHAR2(60)</td>
+                <td>Yes</td>
+                <td>First name field, but with all non-alphabet characters removed, and capitalized. In essence, UPPER(spriden_last_name).</td>
+            </tr>
+            <tr>
+                <td><strong>SPRIDEN_SEARCH_MI</strong></td>
+                <td>VARCHAR2(60)</td>
+                <td>Yes</td>
+                <td>MI name field, but with all non-alphabet characters removed, and capitalized. In essence, UPPER(spriden_last_name).</td>
+            </tr>
+            <tr>
+                <td><strong>SPRIDEN_SOUNDEX_LAST_NAME</strong></td>
+                <td>CHAR(4)</td>
+                <td>Yes</td>
+                <td>Last name field in SOUNDEX phonetic format.</td>
+            </tr>
+            <tr>
+                <td><strong>SPRIDEN_SOUNDEX_FIRST_NAME</strong></td>
+                <td>CHAR(4)</td>
+                <td>Yes</td>
+                <td>First name field in SOUNDEX phonetic format.</td>
+            </tr>
+            <tr>
+                <td><strong>SPRIDEN_NTYP_CODE</strong></td>
+                <td>VARCHAR2(4)</td>
+                <td>Yes</td>
+                <td>Name type code, very often blank.</td>
+            </tr>
+            <tr>
+                <td><strong>SPRIDEN_CREATE_USER</strong></td>
+                <td>VARCHAR2(30)</td>
+                <td>Yes</td>
+                <td>"Record create user", aka, the user ID which created the new record.</td>
+            </tr>
+            <tr>
+                <td><strong>SPRIDEN_CREATE_USER</strong></td>
+                <td>DATE</td>
+                <td>Yes</td>
+                <td>"Record create date", aka, the day of creation for the new record. In Oracle-SQL date format (01-JAN-1999)</td>
+            </tr>
+            <tr>
+                <td><strong>SPRIDEN_DATA_ORIGIN</strong></td>
+                <td>VARCHAR2(30)</td>
+                <td>Yes</td>
+                <td>Source of the data. More often than not "BANNER"</td>
+            </tr>
+            <tr>
+                <td><strong>SPRIDEN_CREATE_FDMN_CODE</strong></td>
+                <td>VARCHAR2(30)</td>
+                <td>Yes</td>
+                <td>"PII domain" of the row. Almost always blank in my experience.</td>
+            </tr>
+            <tr>
+                <td><strong>SPRIDEN_SURNAME_PREFIX</strong></td>
+                <td>VARCHAR2(60)</td>
+                <td>Yes</td>
+                <td>Name tag preceding the last name/surname. (Van, Von, Mac, Darth, etc).</td>
+            </tr>
+            <tr>
+                <td><strong>SPRIDEN_SURROGATE_ID</strong></td>
+                <td>NUMBER(19)</td>
+                <td>No</td>
+                <td>Immutable unique key for the event of a duplicate PIDM/ID.</td>
+            </tr>
+            <tr>
+                <td><strong>SPRIDEN_VERSION</strong></td>
+                <td>NUMBER(19)</td>
+                <td>No</td>
+                <td>Lock token. For my rows, I have a 0 and a 1.</td>
+            </tr>
+            <tr>
+                <td><strong>SPRIDEN_USER_ID</strong></td>
+                <td>VARCHAR2(30)</td>
+                <td>Yes</td>
+                <td>Also, the last user to update this row. Exact same thing as SPRIDEN_USER, just used less.</td>
+            </tr>
+            <tr>
+                <td><strong>SPRIDEN_VPDI_CODE</strong></td>
+                <td>VARCHAR2(30)</td>
+                <td>Yes</td>
+                <td>Also, the last user to update this row. Exact same thing as SPRIDEN_USER, just used less.</td>
+            </tr>
         </tbody>
     </table>
 </main>
