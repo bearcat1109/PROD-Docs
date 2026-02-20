@@ -4,8 +4,10 @@
 document.addEventListener("DOMContentLoaded", function() {
     const navHTML = `
         <a href="index.html" class="home-icon" title="Go to Home Catalog">&#8962;</a>
-        
+
         <div class="nav-dropdown-group">
+            <a href="#sql-queries" class="jump-btn">Just show me that SQL ↓</a>
+
             <label for="table-views">Go To Table View:</label>
             <select id="table-views" onchange="window.location.href=this.value;">
                 <option value="">-- Select a Table --</option>

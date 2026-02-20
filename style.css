@@ -245,3 +245,30 @@ code {
 pre.line-numbers {
     padding-left: 3.8em !important; 
 }
+
+
+/* Jump buttons styling */
+
+.jump-btn {
+    background-color: #e9ecef;
+    color: #495057;
+    text-decoration: none;
+    padding: 6px 12px;
+    border-radius: 4px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    border: 1px solid #ced4da;
+    margin-right: 15px;
+    transition: all 0.2s;
+}
+
+.jump-btn:hover {
+    background-color: #dee2e6;
+    color: #004a99;
+    border-color: #004a99;
+}
+
+/* Optional: Smooth Scrolling */
+html {
+    scroll-behavior: smooth;
+}
