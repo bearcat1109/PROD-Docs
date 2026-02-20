@@ -4,29 +4,31 @@
 // Function to load external Prism syntax highlighitng when we nav to a new page.
 function loadPrism() {
     // Add CSS
-    const link = document.createElement('link');
-    link.rel = 'stylesheet';
-    link.href = 'https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css';
-    document.head.appendChild(link);
+    if (!document.querySelector('link[href*="prism"]')) {
+        const link = document.createElement('link');
+        link.rel = 'stylesheet';
+        link.href = 'https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css';
+        document.head.appendChild(link);
+    }
 
+    // Load Main Prism
     const script = document.createElement('script');
     script.src = 'https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js';
-    document.head.appendChild(script);
-
-    // WAIT for Main JS to load before adding SQL
+    script.async = false; // This helps with loading order
+    
     script.onload = function() {
+        // Load SQL Plugin only after Main Prism is ready
         const sqlScript = document.createElement('script');
         sqlScript.src = 'https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-sql.min.js';
-        document.head.appendChild(sqlScript);
-        
-        // Final highlight once everything is confirmed to be there
+        sqlScript.async = false;
         sqlScript.onload = function() {
             Prism.highlightAll();
         };
+        document.head.appendChild(sqlScript);
     };
+    
+    document.head.appendChild(script);
 }
-
-loadPrism();
 
 document.addEventListener("DOMContentLoaded", function() {
     const navHTML = `
