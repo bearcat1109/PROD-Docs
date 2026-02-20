@@ -234,3 +234,14 @@ code {
     opacity: 1;
     transform: translateX(-50%) translateY(0);
 }
+
+
+/* Prism line numbers */
+.line-numbers .line-numbers-rows {
+    border-right: 1px solid #3e4451; /* Adds a subtle divider line */
+    padding-right: 10px;
+}
+/* Left padding */
+pre.line-numbers {
+    padding-left: 3.8em !important; 
+}
