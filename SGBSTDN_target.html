@@ -1,0 +1,420 @@
+<!-- TEMPLATE table target page --> 
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="libraries/prism.css">
+    <title>Banner PROD: SGBSTDN</title>
+</head>
+<body>
+
+<div id="nav-placeholder" class="nav-container"></div>
+
+<script src="js/nav.js"></script>
+<script src="js/copy_code.js"></script>
+<script src="libraries/prism.js"></script>
+
+<main class="content">
+    <h1>Table: SGBSTDN</h1>
+    <p class="table-description">Student Base Table. KEEP IN MIND: Students do not get a new record in SGBSTDN each term. They only get new rows upon changes, like change in type if they went from Concurrent to Freshman, changed majors, went from levl UG to GR, etc. Because of this behavior, you have to get the MAX(sgbstdn_term_code_eff) per student to get their most current record.</p>
+
+    <table class="data-table">
+        <thead>
+            <tr>
+                <th>Column Name</th>
+                <th>Data Type</th>
+                <th>Nullable</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+                    <tbody>
+            <tr>
+            <td><strong>SGBSTDN_PIDM</strong></td>
+            <td>NUMBER(8,0)</td>
+            <td>No</td>
+            <td>Interal unique identifier for the student. </td>
+            </tr>
+            <tr>
+            <td><strong>SGBSTDN_TERM_CODE_EFF</strong></td>
+            <td>VARCHAR2(6 CHAR)</td>
+            <td>No</td>
+            <td>This field identifies the effective term associated with student record. </td>
+            </tr>
+            <tr>
+            <td><strong>SGBSTDN_STST_CODE</strong></td>
+            <td>VARCHAR2(2 CHAR)</td>
+            <td>No</td>
+            <td>This field identifies the student status for the effective term. <strong>DEFINITION: STVSTST</strong></td>
+            </tr>
+            <tr>
+            <td><strong>SGBSTDN_LEVL_CODE</strong></td>
+            <td>VARCHAR2(2 CHAR)</td>
+            <td>Yes</td>
+            <td>This field identifies the level code of the student for the effective term. <strong>DEFINITION: STVLEVL</strong></td>
+            </tr>
+            <tr>
+            <td><strong>SGBSTDN_STYP_CODE</strong></td>
+            <td>VARCHAR2(1 CHAR)</td>
+            <td>No</td>
+            <td>This field identifies the student type for the effective term. <strong>DEFINITION: STVSTYP</strong> </td>
+            </tr>
+            <tr>
+            <td><strong>SGBSTDN_TERM_CODE_MATRIC</strong></td>
+            <td>VARCHAR2(6 CHAR)</td>
+            <td>Yes</td>
+            <td>This field identifies the effective term of matriculation. Almost always null here.</td>
+            </tr>
+            <tr>
+            <td><strong>SGBSTDN_TERM_CODE_ADMIT</strong></td>
+            <td>VARCHAR2(6 CHAR)</td>
+            <td>Yes</td>
+            <td>This field identifies the term student was first admitted. </td>
+            </tr>
+            <tr>
+            <td><strong>SGBSTDN_EXP_GRAD_DATE</strong></td>
+            <td>DATE</td>
+            <td>Yes</td>
+            <td>This field identifies expected graduation date. Can change based on type/pacing.</td>
+            </tr>
+            <tr>
+            <td><strong>SGBSTDN_CAMP_CODE</strong></td>
+            <td>VARCHAR2(3 CHAR)</td>
+            <td>Yes</td>
+            <td>This field SHOULD identify the campus location associated with the student for the effective term. However, it is almost always null here. </td>
+            </tr>
+            <tr>
+            <td><strong>SGBSTDN_FULL_PART_IND</strong></td>
+            <td>VARCHAR2(1 CHAR)</td>
+            <td>Yes</td>
+            <td>This field identifies whether the student is a full or part-time student. Almost always null here. <strong>My recommendation is to use SFBETRM_TMST_CODE, defined in STVTMST.</strong> </td>
+            </tr>
+            <tr>
+            <td><strong>SGBSTDN_SESS_CODE</strong></td>
+            <td>VARCHAR2(1 CHAR)</td>
+            <td>Yes</td>
+            <td>This field identifies the session student is attending for the effective term. </td>
+            </tr>
+            <tr>
+            <td><strong>SGBSTDN_RESD_CODE</strong></td>
+            <td>VARCHAR2(1 CHAR)</td>
+            <td>Yes</td>
+            <td>This field identifies the residency status of the student for the effective term. </td>
+            </tr>
+            <tr>
+            <td><strong>SGBSTDN_COLL_CODE_1</strong></td>
+            <td>VARCHAR2(2 CHAR)</td>
+            <td>Yes</td>
+            <td>This field identifies the college associated with the primary curriculum for the effective term. </td>
+            </tr>
+            <tr>
+            <td><strong>SGBSTDN_DEGC_CODE_1</strong></td>
+            <td>VARCHAR2(6 CHAR)</td>
+            <td>Yes</td>
+            <td>This field identifies the degree within the primary curriculum for the effective term. </td>
+            </tr>
+            <tr>
+            <td><strong>SGBSTDN_MAJR_CODE_1</strong></td>
+            <td>VARCHAR2(4 CHAR)</td>
+            <td>Yes</td>
+            <td>This field identifies the primary major within the primary curriculum for the effective term. </td>
+            </tr>
+            <tr>
+            <td><strong>SGBSTDN_MAJR_CODE_MINR_1</strong></td>
+            <td>VARCHAR2(4 CHAR)</td>
+            <td>Yes</td>
+            <td>This field identifies the primary minor within the primary curriculum for the effective term. </td>
+            </tr>
+            <tr>
+            <td><strong>SGBSTDN_MAJR_CODE_MINR_1_2</strong></td>
+            <td>VARCHAR2(4 CHAR)</td>
+            <td>Yes</td>
+            <td>This field identifies the secondary minor of the student for the effective term. </td>
+            </tr>
+            <tr>
+            <td><strong>SGBSTDN_MAJR_CODE_CONC_1</strong></td>
+            <td>VARCHAR2(4 CHAR)</td>
+            <td>Yes</td>
+            <td>This field identifies the primary concentration within the primary curriculum for the effective term. </td>
+            </tr>
+            <tr>
+            <td><strong>SGBSTDN_MAJR_CODE_CONC_1_2</strong></td>
+            <td>VARCHAR2(4 CHAR)</td>
+            <td>Yes</td>
+            <td>This field identifies the secondary concentration within the primary curriculum for the effective term. </td>
+            </tr>
+            <tr>
+            <td><strong>SGBSTDN_MAJR_CODE_CONC_1_3</strong></td>
+            <td>VARCHAR2(4 CHAR)</td>
+            <td>Yes</td>
+            <td>This field identifies the third concentration within the primary curriculum for the effective term. </td>
+            </tr>
+            <tr>
+            <td><strong>SGBSTDN_COLL_CODE_2</strong></td>
+            <td>VARCHAR2(2 CHAR)</td>
+            <td>Yes</td>
+            <td>This field identifies the college within the secondary curriculum for the effective term. </td>
+            </tr>
+            <tr>
+            <td><strong>SGBSTDN_DEGC_CODE_2</strong></td>
+            <td>VARCHAR2(6 CHAR)</td>
+            <td>Yes</td>
+            <td>This field identifies the degree within the secondary curriculum for the effective term. </td>
+            </tr>
+            <tr>
+            <td><strong>SGBSTDN_MAJR_CODE_2</strong></td>
+            <td>VARCHAR2(4 CHAR)</td>
+            <td>Yes</td>
+            <td>This field identifies the primary major within the secondary curriculum for the effective term. </td>
+            </tr>
+            <tr>
+            <td><strong>SGBSTDN_MAJR_CODE_MINR_2</strong></td>
+            <td>VARCHAR2(4 CHAR)</td>
+            <td>Yes</td>
+            <td>This field identifies the primary minor within the secondary curriculum for the effective term. </td>
+            </tr>
+            <tr>
+            <td><strong>SGBSTDN_MAJR_CODE_MINR_2_2</strong></td>
+            <td>VARCHAR2(4 CHAR)</td>
+            <td>Yes</td>
+            <td>This field identifies the secondary minor within the secondary curriculum for the effective term. </td>
+            </tr>
+            <tr>
+            <td><strong>SGBSTDN_MAJR_CODE_CONC_2</strong></td>
+            <td>VARCHAR2(4 CHAR)</td>
+            <td>Yes</td>
+            <td>This field identifies the primary concentration within the secondary curriculum for the effective term. </td>
+            </tr>
+            <tr>
+            <td><strong>SGBSTDN_MAJR_CODE_CONC_2_2</strong></td>
+            <td>VARCHAR2(4 CHAR)</td>
+            <td>Yes</td>
+            <td>This field identifies the secondary concentration within the secondary curriculum for the effective term. </td>
+            </tr>
+            <tr>
+            <td><strong>SGBSTDN_MAJR_CODE_CONC_2_3</strong></td>
+            <td>VARCHAR2(4 CHAR)</td>
+            <td>Yes</td>
+            <td>This field identifies the third concentration within the secondary curriculum for the effective term. </td>
+            </tr>
+            <tr>
+            <td><strong>SGBSTDN_ORSN_CODE</strong></td>
+            <td>VARCHAR2(1 CHAR)</td>
+            <td>Yes</td>
+            <td>This field identifies the orientation session assigned to the student for the effective term. </td>
+            </tr>
+            <tr>
+            <td><strong>SGBSTDN_PRAC_CODE</strong></td>
+            <td>VARCHAR2(2 CHAR)</td>
+            <td>Yes</td>
+            <td>This field identifies the practical training experience of the student for the effective term. </td>
+            </tr>
+            <tr>
+            <td><strong>SGBSTDN_ADVR_PIDM</strong></td>
+            <td>NUMBER(8,0)</td>
+            <td>Yes</td>
+            <td>This field identifies the internal identification number for the advisor assigned to the student for the effective term. </td>
+            </tr>
+            <tr>
+            <td><strong>SGBSTDN_GRAD_CREDIT_APPR_IND</strong></td>
+            <td>VARCHAR2(1 CHAR)</td>
+            <td>Yes</td>
+            <td>Eligibility to take graduate courses for credit. Valid values are Y or blank only. </td>
+            </tr>
+            <tr>
+            <td><strong>SGBSTDN_CAPL_CODE</strong></td>
+            <td>VARCHAR2(2 CHAR)</td>
+            <td>Yes</td>
+            <td>This field identifies career plan of the student for the effective term. </td>
+            </tr>
+            <tr>
+            <td><strong>SGBSTDN_LEAV_CODE</strong></td>
+            <td>VARCHAR2(1 CHAR)</td>
+            <td>Yes</td>
+            <td>This field identifies reason of leave of absence of student for the effective term. </td>
+            </tr>
+            <tr>
+            <td><strong>SGBSTDN_LEAV_FROM_DATE</strong></td>
+            <td>DATE</td>
+            <td>Yes</td>
+            <td>This field identifies the begin date of leave of absence of student for the effective term. </td>
+            </tr>
+            <tr>
+            <td><strong>SGBSTDN_LEAV_TO_DATE</strong></td>
+            <td>DATE</td>
+            <td>Yes</td>
+            <td>This field identifies the end date of leave of absence of student for the effective term. </td>
+            </tr>
+            <tr>
+            <td><strong>SGBSTDN_ASTD_CODE</strong></td>
+            <td>VARCHAR2(2 CHAR)</td>
+            <td>Yes</td>
+            <td>This field identifies the academic standing override for a student for the effective term. </td>
+            </tr>
+            <tr>
+            <td><strong>SGBSTDN_TERM_CODE_ASTD</strong></td>
+            <td>VARCHAR2(6 CHAR)</td>
+            <td>Yes</td>
+            <td>This field identifies the term associated with the academic standing override. </td>
+            </tr>
+            <tr>
+            <td><strong>SGBSTDN_RATE_CODE</strong></td>
+            <td>VARCHAR2(5 CHAR)</td>
+            <td>Yes</td>
+            <td>This field identifies a specific assessment rate of the student for the effective term. </td>
+            </tr>
+            <tr>
+            <td><strong>SGBSTDN_ACTIVITY_DATE</strong></td>
+            <td>DATE</td>
+            <td>No</td>
+            <td>This field identifies the most current date record was created or updated. </td>
+            </tr>
+            <tr>
+            <td><strong>SGBSTDN_MAJR_CODE_1_2</strong></td>
+            <td>VARCHAR2(4 CHAR)</td>
+            <td>Yes</td>
+            <td>This field identifies the secondary major within the primary curriculum for the effective term. </td>
+            </tr>
+            <tr>
+            <td><strong>SGBSTDN_MAJR_CODE_2_2</strong></td>
+            <td>VARCHAR2(4 CHAR)</td>
+            <td>Yes</td>
+            <td>This field identifies the secondary major within the secondary curriculum for the effective term. </td>
+            </tr>
+            <tr>
+            <td><strong>SGBSTDN_EDLV_CODE</strong></td>
+            <td>VARCHAR2(3 CHAR)</td>
+            <td>Yes</td>
+            <td>Indicates the highest level of the education that the student completed. </td>
+            </tr>
+            <tr>
+            <td><strong>SGBSTDN_INCM_CODE</strong></td>
+            <td>VARCHAR2(2 CHAR)</td>
+            <td>Yes</td>
+            <td>Indicates the income range of the student. </td>
+            </tr>
+            <tr>
+            <td><strong>SGBSTDN_ADMT_CODE</strong></td>
+            <td>VARCHAR2(2 CHAR)</td>
+            <td>Yes</td>
+            <td>Admissions type from the admissions application. </td>
+            </tr>
+            <tr>
+            <td><strong>SGBSTDN_EMEX_CODE</strong></td>
+            <td>VARCHAR2(2 CHAR)</td>
+            <td>Yes</td>
+            <td>General Student Employment Expectation Code. </td>
+            </tr>
+            <tr>
+            <td><strong>SGBSTDN_APRN_CODE</strong></td>
+            <td>VARCHAR2(2 CHAR)</td>
+            <td>Yes</td>
+            <td>General Student Apprenticeship Code. </td>
+            </tr>
+            <tr>
+            <td><strong>SGBSTDN_TRCN_CODE</strong></td>
+            <td>VARCHAR2(2 CHAR)</td>
+            <td>Yes</td>
+            <td>General Student Transfer Center Code. </td>
+            </tr>
+            <tr>
+            <td><strong>SGBSTDN_GAIN_CODE</strong></td>
+            <td>VARCHAR2(2 CHAR)</td>
+            <td>Yes</td>
+            <td>Employment and training code of the student for the effective term. </td>
+            </tr>
+            <tr>
+            <td><strong>SGBSTDN_VOED_CODE</strong></td>
+            <td>VARCHAR2(2 CHAR)</td>
+            <td>Yes</td>
+            <td>General Student Vocation Education Status Code. </td>
+            </tr>
+            <tr>
+            <td><strong>SGBSTDN_BLCK_CODE</strong></td>
+            <td>VARCHAR2(10 CHAR)</td>
+            <td>Yes</td>
+            <td>Block Schedule Code. </td>
+            </tr>
+            <tr>
+            <td><strong>SGBSTDN_TERM_CODE_GRAD</strong></td>
+            <td>VARCHAR2(6 CHAR)</td>
+            <td>Yes</td>
+            <td>Term student intends to graduate. </td>
+            </tr>
+            <tr>
+            <td><strong>SGBSTDN_ACYR_CODE</strong></td>
+            <td>VARCHAR2(4 CHAR)</td>
+            <td>Yes</td>
+            <td>Year student intends to graduate. </td>
+            </tr>
+            <tr>
+            <td><strong>SGBSTDN_DEPT_CODE</strong></td>
+            <td>VARCHAR2(4 CHAR)</td>
+            <td>Yes</td>
+            <td>Department Code. </td>
+            </tr>
+            <tr>
+            <td><strong>SGBSTDN_SITE_CODE</strong></td>
+            <td>VARCHAR2(3 CHAR)</td>
+            <td>Yes</td>
+            <td>Site Code. </td>
+            </tr>
+            <tr>
+            <td><strong>SGBSTDN_DEPT_CODE_2</strong></td>
+            <td>VARCHAR2(4 CHAR)</td>
+            <td>Yes</td>
+            <td>Department Code for second curriculum. </td>
+            </tr>
+            <tr>
+            <td><strong>SGBSTDN_EGOL_CODE</strong></td>
+            <td>VARCHAR2(2 CHAR)</td>
+            <td>Yes</td>
+            <td>Educational Goal code. </td>
+            </tr>
+            <tr>
+            <td><strong>SGBSTDN_PRIM_ROLL_IND</strong></td>
+            <td>VARCHAR2(1 CHAR)</td>
+            <td>Yes</td>
+            <td>Indicates whether the Primary Curriculum should be Rolled to Academic History. </td>
+            </tr>
+            <tr>
+            <td><strong>SGBSTDN_PROGRAM_1</strong></td>
+            <td>VARCHAR2(12 CHAR)</td>
+            <td>Yes</td>
+            <td>Curriculum 1 Program Code. </td>
+            </tr>
+            <tr>
+            <td><strong>SGBSTDN_SURROGATE_ID</strong></td>
+            <td>NUMBER(19,0)</td>
+            <td>No</td>
+            <td>Immutable unique key. </td>
+            </tr>
+            <tr>
+            <td><strong>SGBSTDN_GUID</strong></td>
+            <td>VARCHAR2(36 BYTE)</td>
+            <td>Yes</td>
+            <td>Global Unique Identifier to uniquely identify the record. </td>
+            </tr>
+            </tbody>
+    </table>
+</main>
+
+<section id = "sql-queries" class="query-section">
+    <h2>Commonly Used Queries</h2>
+    <p>Use these snippets to quickly pull data from this table.</p>
+
+    <div class="code-container">
+        <div class="code-header">
+            <span>SQL: Find Current Name by ID</span>
+            <button class="copy-btn" onclick="copyCode('query1')">Copy</button>
+        </div>
+        <pre id="query1" class="line-numbers"><code class="language-sql">
+            <!-- Code goes here -->
+        </code></pre>
+    </div>
+</section>
+
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!-- TEMPLATE table target page --> 
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="libraries/prism.css">
+    <title>Banner PROD: Table</title>
+</head>
+<body>
+
+<div id="nav-placeholder" class="nav-container"></div>
+
+<script src="js/nav.js"></script>
+<script src="js/copy_code.js"></script>
+<script src="libraries/prism.js"></script>
+
+<main class="content">
+    <h1>Table:</h1>
+    <p class="table-description">Table Description</p>
+
+    <table class="data-table">
+        <thead>
+            <tr>
+                <th>Column Name</th>
+                <th>Data Type</th>
+                <th>Nullable</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>SPRIDEN_PIDM</strong></td>
+                <td>NUMBER(8)</td>
+                <td>No</td>
+                <td>Internal unique identifier for the person/entity.</td>
+            </tr>
+                <!-- Columns go here in tr blocks -->
+            </tr>
+        </tbody>
+    </table>
+</main>
+
+<section id = "sql-queries" class="query-section">
+    <h2>Commonly Used Queries</h2>
+    <p>Use these snippets to quickly pull data from this table.</p>
+
+    <div class="code-container">
+        <div class="code-header">
+            <span>SQL: Find Current Name by ID</span>
+            <button class="copy-btn" onclick="copyCode('query1')">Copy</button>
+        </div>
+        <pre id="query1" class="line-numbers"><code class="language-sql">
+            <!-- Code goes here -->
+        </code></pre>
+    </div>
+</section>
+
+</body>
+</html>
