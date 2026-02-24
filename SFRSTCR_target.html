@@ -1,0 +1,294 @@
+<!-- TEMPLATE table target page --> 
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="libraries/prism.css">
+    <title>Banner PROD: Table</title>
+</head>
+<body>
+
+<div id="nav-placeholder" class="nav-container"></div>
+
+<script src="js/nav.js"></script>
+<script src="js/copy_code.js"></script>
+<script src="libraries/prism.js"></script>
+
+<main class="content">
+    <h1>Table: SFRSTCR</h1>
+    <p class="table-description">This table is for course enrollments. <strong>NOTE ABOUT NSU CRNs: CRNs change with terms. CRNs must always be identified as a CRN/Term Code pair. For example, 31574/202630 is a different section than 31574/202710.</strong></p>
+
+    <table class="data-table">
+        <thead>
+            <tr>
+                <th>Column Name</th>
+                <th>Data Type</th>
+                <th>Nullable</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+            <td><strong>SFRSTCR_TERM_CODE</strong></td>
+            <td>VARCHAR2(6 CHAR)</td>
+            <td>No</td>
+            <td>This field identifies the registration term code. </td>
+            </tr>
+            <tr>
+            <td><strong>SFRSTCR_PIDM</strong></td>
+            <td>NUMBER(8,0)</td>
+            <td>No</td>
+            <td>Internal Identification Number of the person registered. </td>
+            </tr>
+            <tr>
+            <td><strong>SFRSTCR_CRN</strong></td>
+            <td>VARCHAR2(5 CHAR)</td>
+            <td>No</td>
+            <td>This field identifies the course reference number associated with the class section. </td>
+            </tr>
+            <tr>
+            <td><strong>SFRSTCR_CLASS_SORT_KEY</strong></td>
+            <td>NUMBER(4,0)</td>
+            <td>Yes</td>
+            <td>This field identifies the class of the registrant. </td>
+            </tr>
+            <tr>
+            <td><strong>SFRSTCR_REG_SEQ</strong></td>
+            <td>NUMBER(4,0)</td>
+            <td>No</td>
+            <td>This field identifies the sequence in which the student enrolled in the associated class section. </td>
+            </tr>
+            <tr>
+            <td><strong>SFRSTCR_PTRM_CODE</strong></td>
+            <td>VARCHAR2(3 CHAR)</td>
+            <td>Yes</td>
+            <td>This field identifies the part-of-term code associated with this CRN. </td>
+            </tr>
+            <tr>
+            <td><strong>SFRSTCR_RSTS_CODE</strong></td>
+            <td>VARCHAR2(2 CHAR)</td>
+            <td>Yes</td>
+            <td>This field identifies the course registration status associated with this CRN. </td>
+            </tr>
+            <tr>
+            <td><strong>SFRSTCR_RSTS_DATE</strong></td>
+            <td>DATE</td>
+            <td>Yes</td>
+            <td>This field identifies the date associated with the course registration status of this CRN. </td>
+            </tr>
+            <tr>
+            <td><strong>SFRSTCR_ERROR_FLAG</strong></td>
+            <td>VARCHAR2(1 CHAR)</td>
+            <td>Yes</td>
+            <td>Error associated with registration. Values: F=Fatal, D=Do not count, L=WaitListed, O=Override, W=Warning, X=Delete. </td>
+            </tr>
+            <tr>
+            <td><strong>SFRSTCR_MESSAGE</strong></td>
+            <td>VARCHAR2(200 CHAR)</td>
+            <td>Yes</td>
+            <td>This field identifies a message associated with the registration of the CRN. </td>
+            </tr>
+            <tr>
+            <td><strong>SFRSTCR_BILL_HR</strong></td>
+            <td>NUMBER(7,3)</td>
+            <td>Yes</td>
+            <td>This field identifies the billing hours associated with this CRN. </td>
+            </tr>
+            <tr>
+            <td><strong>SFRSTCR_WAIV_HR</strong></td>
+            <td>NUMBER(7,3)</td>
+            <td>Yes</td>
+            <td>This field identifies the waived hours associated with this CRN. </td>
+            </tr>
+            <tr>
+            <td><strong>SFRSTCR_CREDIT_HR</strong></td>
+            <td>NUMBER(7,3)</td>
+            <td>Yes</td>
+            <td>This field identifies the credit hours associated with this CRN. </td>
+            </tr>
+            <tr>
+            <td><strong>SFRSTCR_BILL_HR_HOLD</strong></td>
+            <td>NUMBER(7,3)</td>
+            <td>Yes</td>
+            <td>This field identifies the billing hours to hold for reinstatements. </td>
+            </tr>
+            <tr>
+            <td><strong>SFRSTCR_CREDIT_HR_HOLD</strong></td>
+            <td>NUMBER(7,3)</td>
+            <td>Yes</td>
+            <td>This field identifies the credit hours to hold for reinstatements. </td>
+            </tr>
+            <tr>
+            <td><strong>SFRSTCR_GMOD_CODE</strong></td>
+            <td>VARCHAR2(1 CHAR)</td>
+            <td>Yes</td>
+            <td>This field identifies the grade mode associated with this CRN. </td>
+            </tr>
+            <tr>
+            <td><strong>SFRSTCR_GRDE_CODE</strong></td>
+            <td>VARCHAR2(6 CHAR)</td>
+            <td>Yes</td>
+            <td>This field identifies the grade code associated with this CRN. </td>
+            </tr>
+            <tr>
+            <td><strong>SFRSTCR_GRDE_CODE_MID</strong></td>
+            <td>VARCHAR2(6 CHAR)</td>
+            <td>Yes</td>
+            <td>This field identifies the mid-term grade code associated with this CRN. </td>
+            </tr>
+            <tr>
+            <td><strong>SFRSTCR_GRDE_DATE</strong></td>
+            <td>DATE</td>
+            <td>Yes</td>
+            <td>This field identifies the date associated with the grade of this CRN. </td>
+            </tr>
+            <tr>
+            <td><strong>SFRSTCR_DUPL_OVER</strong></td>
+            <td>VARCHAR2(1 CHAR)</td>
+            <td>Yes</td>
+            <td>This field identifies the duplicate course override of this CRN. </td>
+            </tr>
+            <tr>
+            <td><strong>SFRSTCR_LINK_OVER</strong></td>
+            <td>VARCHAR2(1 CHAR)</td>
+            <td>Yes</td>
+            <td>This field identifies the link override of this CRN. </td>
+            </tr>
+            <tr>
+            <td><strong>SFRSTCR_CORQ_OVER</strong></td>
+            <td>VARCHAR2(1 CHAR)</td>
+            <td>Yes</td>
+            <td>This field identifies the corequisite override of this CRN. </td>
+            </tr>
+            <tr>
+            <td><strong>SFRSTCR_PREQ_OVER</strong></td>
+            <td>VARCHAR2(1 CHAR)</td>
+            <td>Yes</td>
+            <td>This field identifies the prerequisite override of this CRN. </td>
+            </tr>
+            <tr>
+            <td><strong>SFRSTCR_TIME_OVER</strong></td>
+            <td>VARCHAR2(1 CHAR)</td>
+            <td>Yes</td>
+            <td>This field identifies the time conflict override of this CRN. </td>
+            </tr>
+            <tr>
+            <td><strong>SFRSTCR_CAPC_OVER</strong></td>
+            <td>VARCHAR2(1 CHAR)</td>
+            <td>Yes</td>
+            <td>This field identifies the capacity override of this CRN. </td>
+            </tr>
+            <tr>
+            <td><strong>SFRSTCR_LEVL_OVER</strong></td>
+            <td>VARCHAR2(1 CHAR)</td>
+            <td>Yes</td>
+            <td>This field identifies the level restriction override of this CRN. </td>
+            </tr>
+            <tr>
+            <td><strong>SFRSTCR_COLL_OVER</strong></td>
+            <td>VARCHAR2(1 CHAR)</td>
+            <td>Yes</td>
+            <td>This field identifies the college restriction override of this CRN. </td>
+            </tr>
+            <tr>
+            <td><strong>SFRSTCR_MAJR_OVER</strong></td>
+            <td>VARCHAR2(1 CHAR)</td>
+            <td>Yes</td>
+            <td>This field identifies the major restriction override of this CRN. </td>
+            </tr>
+            <tr>
+            <td><strong>SFRSTCR_CLAS_OVER</strong></td>
+            <td>VARCHAR2(1 CHAR)</td>
+            <td>Yes</td>
+            <td>This field identifies the class restriction override of this CRN. </td>
+            </tr>
+            <tr>
+            <td><strong>SFRSTCR_APPR_OVER</strong></td>
+            <td>VARCHAR2(1 CHAR)</td>
+            <td>Yes</td>
+            <td>This field identifies the special approval override of this CRN. </td>
+            </tr>
+            <tr>
+            <td><strong>SFRSTCR_ADD_DATE</strong></td>
+            <td>DATE</td>
+            <td>No</td>
+            <td>This field identifies the add date of the registrant in this CRN. </td>
+            </tr>
+            <tr>
+            <td><strong>SFRSTCR_ACTIVITY_DATE</strong></td>
+            <td>DATE</td>
+            <td>No</td>
+            <td>This field identifies the most current date record was created or updated. </td>
+            </tr>
+            <tr>
+            <td><strong>SFRSTCR_LEVL_CODE</strong></td>
+            <td>VARCHAR2(2 CHAR)</td>
+            <td>No</td>
+            <td>This field identifies the level the registrant is enrolled for this CRN. </td>
+            </tr>
+            <tr>
+            <td><strong>SFRSTCR_CAMP_CODE</strong></td>
+            <td>VARCHAR2(3 CHAR)</td>
+            <td>No</td>
+            <td>This field identifies the campus code of this CRN. </td>
+            </tr>
+            <tr>
+            <td><strong>SFRSTCR_ATTEND_HR</strong></td>
+            <td>NUMBER(9,3)</td>
+            <td>Yes</td>
+            <td>This column contains the number of hours the student attended this class. </td>
+            </tr>
+            <tr>
+            <td><strong>SFRSTCR_USER</strong></td>
+            <td>VARCHAR2(30 CHAR)</td>
+            <td>Yes</td>
+            <td>Identifies the user who entered the registration request. </td>
+            </tr>
+            <tr>
+            <td><strong>SFRSTCR_WL_PRIORITY</strong></td>
+            <td>NUMBER(11,6)</td>
+            <td>Yes</td>
+            <td>WAITLIST PRIORITY: The Waitlist priority. </td>
+            </tr>
+            <tr>
+            <td><strong>SFRSTCR_SURROGATE_ID</strong></td>
+            <td>NUMBER(19,0)</td>
+            <td>No</td>
+            <td>SURROGATE ID: Immutable unique key. </td>
+            </tr>
+            <tr>
+            <td><strong>SFRSTCR_VERSION</strong></td>
+            <td>NUMBER(19,0)</td>
+            <td>No</td>
+            <td>VERSION: Optimistic lock token. </td>
+            </tr>
+            <tr>
+            <td><strong>SFRSTCR_CURRENT_TIME</strong></td>
+            <td>TIMESTAMP(9)</td>
+            <td>Yes</td>
+            <td>CURRENT TIME: The current time of the registration. </td>
+            </tr>
+        </tbody>
+    </table>
+</main>
+
+<section id = "sql-queries" class="query-section">
+    <h2>Commonly Used Queries</h2>
+    <p>Use these snippets to quickly pull data from this table.</p>
+
+    <div class="code-container">
+        <div class="code-header">
+            <span>SQL: Find Current Name by ID</span>
+            <button class="copy-btn" onclick="copyCode('query1')">Copy</button>
+        </div>
+        <pre id="query1" class="line-numbers"><code class="language-sql">
+            <!-- Code goes here -->
+        </code></pre>
+    </div>
+</section>
+
+</body>
+</html>

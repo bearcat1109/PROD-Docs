@@ -1,0 +1,276 @@
+<!-- TEMPLATE table target page --> 
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="libraries/prism.css">
+    <title>Banner PROD: Table</title>
+</head>
+<body>
+
+<div id="nav-placeholder" class="nav-container"></div>
+
+<script src="js/nav.js"></script>
+<script src="js/copy_code.js"></script>
+<script src="libraries/prism.js"></script>
+
+<main class="content">
+    <h1>Table:WM_SLL_CRSE</h1>
+    <p class="table-description">Custom Watermark table for courses to be sent to System Admin/SLL. SCBCRSE is matched on these courses in the Watermark Courses/Sections/Enrollments files, to only send approved courses into the panel. The Watermark project can be found in GitLab under NSU-ENTERPRISE / Autobot.</p>
+
+    <table class="data-table">
+        <thead>
+            <tr>
+                <th>Column Name</th>
+                <th>Data Type</th>
+                <th>Nullable</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>WM_SLL_CRSE_SUBJ_CODE</strong></td>
+                <td>VARCHAR2(5)</td>
+                <td>No</td>
+                <td>Subject code for the course. <strong>Matches onto scbcrse_subj_code/ssbsect_subj_code</strong></td>
+            </tr>
+            <tr>
+                <td><strong>WM_SLL_CRSE_CRSE_NUMB</strong></td>
+                <td>VARCHAR2(4)</td>
+                <td>No</td>
+                <td>Course number for the course. <strong>Matches onto scbcrse_crse_numb/ssbsect_crse_numb</strong></td>
+            </tr>
+            <tr>
+                <td><strong>WM_SLL_CRSE_COLL_CODE</strong></td>
+                <td>VARCHAR2(2)</td>
+                <td>No</td>
+                <td>College code. Does not necessarily have to associate with Banner's college code for a course, just want Lisa/Lori/Dr. Keller/Watermark functional users want the course to fall under in Watermark.</td>
+            </tr>
+            <tr>
+                <td><strong>WM_SLL_CRSE_NODE_NAME</strong></td>
+                <td>VARCHAR2(50)</td>
+                <td>No</td>
+                <td>Node Name for the course. This just means what hierarchy "node" the course will fall under in Watermark.</td>
+            </tr>
+        </tbody>
+    </table>
+</main>
+
+<section id = "sql-queries" class="query-section">
+    <h2>Commonly Used Queries</h2>
+    <p>Use these snippets to quickly pull data from this table.</p>
+
+    <div class="code-container">
+        <div class="code-header">
+            <span>SQL: Watermark Course Import</span>
+            <button class="copy-btn" onclick="copyCode('query1')">Copy</button>
+        </div>
+        <pre id="query1" class="line-numbers"><code class="language-sql">-- Watermark Course Import. Pulled 2/24/26 Gabriel Berres
+SELECT DISTINCT
+    scbcrse_subj_code
+    || ' '
+    || scbcrse_crse_numb  AS "course_catalog_code",
+    scbcrse_title         AS "course_name",
+    wm_sll_crse_node_name AS "organization_code",
+    scbcrse_subj_code     AS "subject_code",
+    scbcrse_crse_numb     AS "course_number",
+    ''                    AS "course_description",
+    scbcrse_credit_hr_low AS "credits",
+    substr(scbcrse_cipc_code, 2, 2) || '.' || substr(scbcrse_cipc_code, 3, 6) AS "Cip_code"
+FROM
+         (
+        SELECT DISTINCT
+            scbcrse_subj_code                                       AS w_scbcrse_subj_code,
+            scbcrse_crse_numb                                       AS w_scbcrse_crse_numb,
+            MAX(scbcrse_eff_term)
+            OVER(PARTITION BY scbcrse_subj_code, scbcrse_crse_numb) AS w_scbcrse_eff_term
+        FROM
+            scbcrse
+    ) w_scbcrse
+    JOIN scbcrse ON scbcrse_subj_code = w_scbcrse_subj_code
+                    AND scbcrse_crse_numb = w_scbcrse_crse_numb
+                    AND scbcrse_eff_term = w_scbcrse_eff_term
+    JOIN stvdept ON stvdept_code = scbcrse_dept_code
+    JOIN nsudev.wm_sll_crse ON wm_sll_crse_crse_numb = scbcrse_crse_numb
+                               AND wm_sll_crse_subj_code = scbcrse_subj_code
+                               AND wm_sll_crse_coll_code IN ('ED', 'BT', '00')
+ORDER BY
+    1
+        </code></pre>
+    </div>
+
+    <div class="code-container">
+        <div class="code-header">
+            <span>SQL: Watermark Enrollments Import</span>
+            <button class="copy-btn" onclick="copyCode('query1')">Copy</button>
+        </div>
+        <pre id="query1" class="line-numbers"><code class="language-sql">-- Watermark Enrollments file. Pulled 2/24/26 Gabriel Berres
+WITH w_stvterm AS (
+    SELECT
+        term_values,
+        terms
+    FROM
+        (
+            SELECT
+                (
+                    SELECT
+                        MAX(stvterm_code)
+                    FROM
+                        stvterm
+                    WHERE
+                        sysdate > stvterm_start_date
+                    FETCH FIRST 1 ROWS ONLY
+                )   w_stvterm_current,
+                CASE
+                    WHEN substr(stvterm_current_term, 5, 2) = '10' THEN
+                        substr(stvterm_current_term,
+                               1,
+                               length(stvterm_current_term) - 2)
+                        || '20'
+                    WHEN substr(stvterm_current_term, 5, 2) = '20' THEN
+                        substr(stvterm_current_term,
+                               1,
+                               length(stvterm_current_term) - 2)
+                        || '30'
+                    WHEN substr(stvterm_current_term, 5, 2) = '30' THEN
+                        ( substr(stvterm_current_term, 1, 4) + 1 )
+                        || '10'
+                END AS w_stvterm_next
+            FROM
+                (
+                    SELECT
+                        stvterm_code stvterm_current_term
+                    FROM
+                        stvterm
+                    WHERE
+                        stvterm_start_date < sysdate
+                    ORDER BY
+                        stvterm_start_date DESC
+                    FETCH FIRST 1 ROWS ONLY
+                )
+        ) UNPIVOT ( term_values
+            FOR terms
+        IN ( w_stvterm_current,
+             w_stvterm_next ) )
+), w_scbcrse AS (
+    SELECT DISTINCT
+        scbcrse_subj_code                                       AS w_scbcrse_subj_code,
+        scbcrse_crse_numb                                       AS w_scbcrse_crse_numb,
+        MAX(scbcrse_eff_term)
+        OVER(PARTITION BY scbcrse_subj_code, scbcrse_crse_numb) AS w_scbcrse_eff_term
+    FROM
+        scbcrse
+      --  JOIN nsudev.wm_sll_crse ON wm_sll_crse_crse_numb = ssbsect_crse_numb
+      --                             AND wm_sll_crse_subj_code = ssbsect_subj_code
+), dupe_ssrmeet AS (
+    SELECT
+        ssrmeet_crn       AS dupe_ssrmeet_crn,
+        ssrmeet_term_code AS dupe_ssrmeet_term_code,
+        CASE
+            WHEN COUNT(ssrmeet_crn
+                       || '.'
+                       || ssrmeet_term_code) > 1 THEN
+                'Y'
+            ELSE
+                'N'
+        END               AS dupe_ssrmeet_dupe
+    FROM
+        ssrmeet
+    WHERE
+        ssrmeet_term_code = '202620'
+    GROUP BY
+        ssrmeet_crn,
+        ssrmeet_term_code
+)
+SELECT
+    ssbsect_crn
+    || '.'
+    || ssbsect_term_code                  AS "section_id",
+    gobtpac_external_user || '@nsuok.edu' AS "email",
+    'FALSE'                               AS "Instructor",
+    CASE
+        WHEN sfrstcr_rsts_code LIKE 'D_' THEN
+            'FALSE'
+        WHEN sfrstcr_rsts_code LIKE 'O_' THEN
+            'FALSE'
+        WHEN sfrstcr_rsts_code LIKE 'W_' THEN
+            'FALSE'
+        ELSE
+            'TRUE'
+    END                                   AS "student"
+FROM
+         sfrstcr
+    JOIN gobtpac ON gobtpac_pidm = sfrstcr_pidm
+    JOIN ssbsect ON ssbsect_crn = sfrstcr_crn
+                    AND ssbsect_term_code IN (
+        SELECT
+            term_values
+        FROM
+            w_stvterm
+    )
+    JOIN nsudev.wm_sll_crse ON wm_sll_crse_crse_numb = ssbsect_crse_numb
+                               AND wm_sll_crse_subj_code = ssbsect_subj_code
+                               AND wm_sll_crse_coll_code IN ( 'ED', 'BT' )
+    JOIN w_scbcrse ON w_scbcrse_subj_code = ssbsect_subj_code
+                      AND w_scbcrse_crse_numb = ssbsect_crse_numb
+    JOIN scbcrse ON scbcrse_subj_code = w_scbcrse_subj_code
+                    AND scbcrse_crse_numb = w_scbcrse_crse_numb
+                    AND scbcrse_eff_term = w_scbcrse_eff_term
+    LEFT JOIN dupe_ssrmeet ON dupe_ssrmeet_crn = ssbsect_crn
+                         AND dupe_ssrmeet_term_code = ssbsect_term_code
+                         AND dupe_ssrmeet_dupe = 'N'
+WHERE
+    sfrstcr_term_code IN (
+        SELECT
+            term_values
+        FROM
+            w_stvterm
+    )
+    AND sfrstcr_crn <> '20176'
+UNION ALL
+SELECT DISTINCT
+    ssbsect_crn
+    || '.'
+    || ssbsect_term_code                  AS "Section_id",
+    gobtpac_external_user || '@nsuok.edu' AS "Email",
+    'TRUE'                                AS "Instructor",
+    'FALSE'                               AS "Student"
+FROM
+         sirasgn
+    JOIN gobtpac ON gobtpac_pidm = sirasgn_pidm
+    JOIN ssbsect ON ssbsect_crn = sirasgn_crn
+                    AND ssbsect_term_code IN (
+        SELECT
+            term_values
+        FROM
+            w_stvterm
+    )
+    JOIN nsudev.wm_sll_crse ON wm_sll_crse_crse_numb = ssbsect_crse_numb
+                               AND wm_sll_crse_subj_code = ssbsect_subj_code
+                               AND wm_sll_crse_coll_code IN ( 'ED', 'BT' )
+    JOIN w_scbcrse ON w_scbcrse_subj_code = ssbsect_subj_code
+                      AND w_scbcrse_crse_numb = ssbsect_crse_numb
+    JOIN scbcrse ON scbcrse_subj_code = w_scbcrse_subj_code
+                    AND scbcrse_crse_numb = w_scbcrse_crse_numb
+                    AND scbcrse_eff_term = w_scbcrse_eff_term
+    LEFT JOIN dupe_ssrmeet ON dupe_ssrmeet_crn = ssbsect_crn
+                         AND dupe_ssrmeet_term_code = ssbsect_term_code
+                         AND dupe_ssrmeet_dupe = 'N'
+WHERE
+        sirasgn_primary_ind = 'Y'
+    AND sirasgn_term_code IN (
+        SELECT
+            term_values
+        FROM
+            w_stvterm
+    )
+    AND sirasgn_crn <> '20176'
+        </code></pre>
+    </div>
+</section>
+
+</body>
+</html>

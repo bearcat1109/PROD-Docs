@@ -12,9 +12,8 @@ document.addEventListener("DOMContentLoaded", function() {
             <select id="table-views" onchange="window.location.href=this.value;">
                 <option value="">-- Select a Table --</option>
                 <option value="SPRIDEN_target.html">SPRIDEN (Identification)</option>
-                <option value="SPBPERS_target.html">SPBPERS (Bio/Demo)</option>
-                <option value="SPRTELE_target.html">SPRTELE (Telephone)</option>
-                <option value="SPRADDR_target.html">SPRADDR (Address)</option>
+                <option value="SGBSTDN_target.html">SGBSTDN (Student Base)</option>
+                <option value="WM_SLL_CRSE_target.html">WM_SLL_CRSE (Watermark Courses)</option>
             </select>
         </div>
     `;
