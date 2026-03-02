@@ -281,11 +281,54 @@
 
     <div class="code-container">
         <div class="code-header">
-            <span>SQL: Find Current Name by ID</span>
+            <span>SQL: Get each student enrolled for the term and all of their valid classes.</span>
             <button class="copy-btn" onclick="copyCode('query1')">Copy</button>
         </div>
-        <pre id="query1" class="line-numbers"><code class="language-sql">
-            <!-- Code goes here -->
+        <pre id="query1" class="line-numbers"><code class="language-sql">-- Get each student enrolled for the term and all of their valid classes.
+-- 3/2/26 Gabriel Berres
+SELECT DISTINCT
+    sfrstcr_pidm,
+    spriden_last_name || ', ' || spriden_first_name student,
+    sfrstcr_crn,
+    scbcrse_title,
+    sfrstcr_credit_hr,
+    sfrstcr_rsts_code,
+    stvrsts_desc
+FROM
+    sfrstcr
+    JOIN stvrsts ON stvrsts_code = sfrstcr_rsts_code
+    JOIN ssbsect ON ssbsect_crn = sfrstcr_crn
+        AND ssbsect_term_code = sfrstcr_term_code
+    JOIN scbcrse ON scbcrse_crse_numb = ssbsect_crse_numb
+        AND scbcrse_subj_code = ssbsect_subj_code
+    JOIN spriden ON spriden_pidm = sfrstcr_pidm
+        AND spriden_change_ind IS NULL
+WHERE
+    sfrstcr_term_code = '202630'
+    AND sfrstcr_rsts_code IN ('RE', 'RW')
+ORDER BY 2
+        </code></pre>
+    </div>
+
+    <div class="code-container">
+        <div class="code-header">
+            <span>SQL: Get Each student enrolled for this term and their total hours enrolled</span>
+            <button class="copy-btn" onclick="copyCode('query1')">Copy</button>
+        </div>
+        <pre id="query1" class="line-numbers"><code class="language-sql">-- Each student enrolled for this term and their total hours enrolled
+-- 3/2/26 Gabriel Berres
+SELECT DISTINCT
+    sfrstcr_pidm,
+    spriden_last_name || ', ' || spriden_first_name student,
+    SUM(sfrstcr_credit_hr) OVER(PARTITION BY sfrstcr_pidm) sum_enrolled
+FROM
+    sfrstcr
+    JOIN spriden ON spriden_pidm = sfrstcr_pidm
+        AND spriden_change_ind IS NULL
+WHERE
+    sfrstcr_term_code = '202630'
+    AND sfrstcr_rsts_code IN ('RE', 'RW')
+ORDER BY 2
         </code></pre>
     </div>
 </section>
